@@ -1,0 +1,31 @@
+CREATE TABLE [dbo].[tblUsuarios](
+	[IdUsuario] [int] IDENTITY(1,1) NOT NULL,
+	[IdSql] [int] NULL,
+	[ULogin] [nvarchar](50) NULL,
+	[UNombre] [nvarchar](256) NULL,
+	[Correro] [nvarchar](256) NULL,
+	[IdRol] [int] NULL,
+	[Activo] [bit] NULL,
+	[Admin] [bit] NOT NULL,
+ CONSTRAINT [PK_Usuarios] PRIMARY KEY CLUSTERED 
+(
+	[IdUsuario] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+ CONSTRAINT [IX_Usuarios] UNIQUE NONCLUSTERED 
+(
+	[ULogin] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[tblUsuarios] ADD  DEFAULT ((0)) FOR [Admin]
+GO
+
+CREATE TABLE [dbo].[tblRoles](
+	[IdRol] [int] IDENTITY(1,1) NOT NULL,
+	[Nombre] [nvarchar](250) NULL,
+	[Descripcion] [nvarchar](250) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[IdRol] ASC
+))
