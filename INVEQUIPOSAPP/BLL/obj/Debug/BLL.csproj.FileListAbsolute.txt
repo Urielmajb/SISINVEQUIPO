@@ -1,0 +1,13 @@
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\bin\Debug\BLL.dll
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\bin\Debug\BLL.pdb
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\bin\Debug\DAL.dll
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\bin\Debug\Entity.dll
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\bin\Debug\Ofn.dll
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\bin\Debug\DAL.pdb
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\bin\Debug\Entity.pdb
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\bin\Debug\Ofn.pdb
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\obj\Debug\BLL.dll
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\BLL\obj\Debug\BLL.pdb

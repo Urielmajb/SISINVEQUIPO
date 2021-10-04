@@ -1,0 +1,11 @@
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\DAL\bin\Debug\DAL.dll
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\DAL\bin\Debug\DAL.pdb
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\DAL\bin\Debug\Entity.dll
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\DAL\bin\Debug\Ofn.dll
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\DAL\bin\Debug\Entity.pdb
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\DAL\bin\Debug\Ofn.pdb
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\DAL\obj\Debug\DAL.dll
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,6 @@
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\Ofn\bin\Debug\Ofn.dll
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\Ofn\bin\Debug\Ofn.pdb
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\Ofn\obj\Debug\Ofn.csproj.AssemblyReference.cache
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\Ofn\obj\Debug\Ofn.csproj.CoreCompileInputs.cache
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\Ofn\obj\Debug\Ofn.dll
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\Ofn\obj\Debug\Ofn.pdb

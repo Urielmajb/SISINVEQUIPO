@@ -15,4 +15,8 @@ Por lo tanto se pretende realizar un sistema de inventario para hacer obtener un
 3. Tbl Rol, id, rol. / ya
 4. Tbl Usuarios: idusuario. /ya
 
-crear los procedimientos. 
+- crear los procedimientos. / ya
+
+- creacion del proyecto en visual.
+
+

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INVEQUIPOS_UI.Menu;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace INVEQUIPOS_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmMenu());
         }
     }
 }
