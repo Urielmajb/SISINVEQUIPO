@@ -36,7 +36,7 @@ namespace DAL
             var DT = new DataTable();
             try
             {
-                DT = fn.Leer("Usp_Sel_Dispositivo");
+                DT = fn.Leer("Usp_Sel_Dispositivo", 0);
             }
             catch (Exception ex)
             {

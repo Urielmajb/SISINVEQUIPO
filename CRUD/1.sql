@@ -1,9 +1,11 @@
 use DBEquipo
 
+--DBA_Generate_SQL_Structure 'DBEquipo','dbo','tblDispositivo'
 CREATE TABLE tblDispositivo	(ID_dispo INT IDENTITY (1,1),
                           Dispositivo VARCHAR(75) NOT NULL,
 						  CONSTRAINT [PK_tblDispositivo_ID_dispo] PRIMARY KEY (ID_dispo))
 
+--DBA_Generate_SQL_Structure 'DBEquipo','dbo','tblTipoReunion'
 CREATE TABLE tblTipoReunion	(ID_Tipo INT IDENTITY (1,1),
                           TipoReunion VARCHAR(50) NOT NULL,
 						  CONSTRAINT [PK_tblTipoReunion_ID_Tipo] PRIMARY KEY (ID_Tipo))

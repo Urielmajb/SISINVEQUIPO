@@ -82,6 +82,7 @@ namespace INVEQUIPOS_UI.Menu
             this.barButtonEquipo.Id = 1;
             this.barButtonEquipo.ImageOptions.SvgImage = global::INVEQUIPOS_UI.Properties.Resources.electronics_laptopwindows;
             this.barButtonEquipo.Name = "barButtonEquipo";
+            this.barButtonEquipo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonEquipo_ItemClick);
             // 
             // barButtonPersonas
             // 
@@ -220,6 +221,7 @@ namespace INVEQUIPOS_UI.Menu
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

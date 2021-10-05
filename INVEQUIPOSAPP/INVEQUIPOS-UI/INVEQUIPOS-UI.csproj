@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\FrmEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\FrmEquipo.Designer.cs">
+      <DependentUpon>FrmEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\FrmListarEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Variables.cs" />
+    <EmbeddedResource Include="Catalogos\FrmEquipo.resx">
+      <DependentUpon>FrmEquipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FrmListarEquipo.resx">
       <DependentUpon>FrmListarEquipo.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +170,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\adateoccurring_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newcomment_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveto_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfile_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editname_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newcontact_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletefooter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editname_32x321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
