@@ -1,6 +1,5 @@
 use DBEquipo
-
---DBA_Generate_SQL_Structure 'DBEquipo','dbo','tblDispositivo'
+ 
 CREATE TABLE tblDispositivo	(ID_dispo INT IDENTITY (1,1),
                           Dispositivo VARCHAR(75) NOT NULL,
 						  CONSTRAINT [PK_tblDispositivo_ID_dispo] PRIMARY KEY (ID_dispo))

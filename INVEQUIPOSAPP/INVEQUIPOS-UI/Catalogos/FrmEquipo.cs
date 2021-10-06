@@ -79,19 +79,17 @@ namespace INVEQUIPOS_UI.Catalogos
             TxtActivo.Text = "A";
         }
 
-
         #endregion
         public FrmEquipo()
         {
             InitializeComponent();
         }
-
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void FrmEquipo_Load(object sender, EventArgs e)
+      private void FrmEquipo_Load(object sender, EventArgs e)
         {
             
             TxtActivo.ReadOnly = true;
