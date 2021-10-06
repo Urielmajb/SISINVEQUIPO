@@ -44,9 +44,5 @@ namespace BLL
                 return oPersona.Editar(oPersonaEntity);
             }
         }
-
-
-
-
     }
 }

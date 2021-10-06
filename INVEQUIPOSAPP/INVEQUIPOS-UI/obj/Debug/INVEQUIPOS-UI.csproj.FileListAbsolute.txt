@@ -99,3 +99,5 @@ C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\bin\Debug\ja\
 C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\bin\Debug\ru\DevExpress.Office.v19.2.Core.resources.dll
 C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Catalogos.FrmListarEquipo.resources
 C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Catalogos.FrmEquipo.resources
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Catalogos.FrmListarPersona.resources
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Catalogos.FrmAgregarPersona.resources

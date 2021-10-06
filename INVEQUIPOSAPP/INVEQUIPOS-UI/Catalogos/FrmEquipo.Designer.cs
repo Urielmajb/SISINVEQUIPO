@@ -33,6 +33,8 @@ namespace INVEQUIPOS_UI.Catalogos
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEquipo));
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.TxtIdEquipo = new DevExpress.XtraEditors.TextEdit();
+            this.TxtActivo = new DevExpress.XtraEditors.TextEdit();
             this.TxtCodigoActivo = new DevExpress.XtraEditors.TextEdit();
             this.TxtNombre = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -45,9 +47,10 @@ namespace INVEQUIPOS_UI.Catalogos
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.Error = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.TxtActivo = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.Error = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.BtnCerrar = new DevExpress.XtraEditors.SimpleButton();
             this.BtnBaja = new DevExpress.XtraEditors.SimpleButton();
             this.BtnNuevo = new DevExpress.XtraEditors.SimpleButton();
@@ -56,11 +59,10 @@ namespace INVEQUIPOS_UI.Catalogos
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.TxtIdEquipo = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtIdEquipo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtActivo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCodigoActivo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNombre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbDispositivo.Properties)).BeginInit();
@@ -72,16 +74,14 @@ namespace INVEQUIPOS_UI.Catalogos
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtActivo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtIdEquipo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -103,6 +103,22 @@ namespace INVEQUIPOS_UI.Catalogos
             this.layoutControl1.Size = new System.Drawing.Size(520, 229);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // TxtIdEquipo
+            // 
+            this.TxtIdEquipo.Location = new System.Drawing.Point(109, 35);
+            this.TxtIdEquipo.Name = "TxtIdEquipo";
+            this.TxtIdEquipo.Size = new System.Drawing.Size(149, 20);
+            this.TxtIdEquipo.StyleController = this.layoutControl1;
+            this.TxtIdEquipo.TabIndex = 13;
+            // 
+            // TxtActivo
+            // 
+            this.TxtActivo.Location = new System.Drawing.Point(109, 131);
+            this.TxtActivo.Name = "TxtActivo";
+            this.TxtActivo.Size = new System.Drawing.Size(399, 20);
+            this.TxtActivo.StyleController = this.layoutControl1;
+            this.TxtActivo.TabIndex = 12;
             // 
             // TxtCodigoActivo
             // 
@@ -237,18 +253,6 @@ namespace INVEQUIPOS_UI.Catalogos
             this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // Error
-            // 
-            this.Error.ContainerControl = this;
-            // 
-            // TxtActivo
-            // 
-            this.TxtActivo.Location = new System.Drawing.Point(109, 131);
-            this.TxtActivo.Name = "TxtActivo";
-            this.TxtActivo.Size = new System.Drawing.Size(399, 20);
-            this.TxtActivo.StyleController = this.layoutControl1;
-            this.TxtActivo.TabIndex = 12;
-            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -259,6 +263,29 @@ namespace INVEQUIPOS_UI.Catalogos
             this.layoutControlItem9.Size = new System.Drawing.Size(500, 24);
             this.layoutControlItem9.Text = "Estado:";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(94, 14);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.ContentVisible = false;
+            this.layoutControlItem10.Control = this.TxtIdEquipo;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(250, 24);
+            this.layoutControlItem10.Text = "ID Equipo";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(94, 13);
+            this.layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.Location = new System.Drawing.Point(250, 23);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(250, 24);
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // Error
+            // 
+            this.Error.ContainerControl = this;
             // 
             // BtnCerrar
             // 
@@ -358,33 +385,6 @@ namespace INVEQUIPOS_UI.Catalogos
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
-            // TxtIdEquipo
-            // 
-            this.TxtIdEquipo.Location = new System.Drawing.Point(109, 35);
-            this.TxtIdEquipo.Name = "TxtIdEquipo";
-            this.TxtIdEquipo.Size = new System.Drawing.Size(149, 20);
-            this.TxtIdEquipo.StyleController = this.layoutControl1;
-            this.TxtIdEquipo.TabIndex = 13;
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.ContentVisible = false;
-            this.layoutControlItem10.Control = this.TxtIdEquipo;
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 23);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(250, 24);
-            this.layoutControlItem10.Text = "ID Equipo";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(94, 13);
-            this.layoutControlItem10.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
-            // 
-            // emptySpaceItem4
-            // 
-            this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(250, 23);
-            this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(250, 24);
-            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // FrmEquipo
             // 
             this.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -401,6 +401,8 @@ namespace INVEQUIPOS_UI.Catalogos
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             this.layoutControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtIdEquipo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtActivo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCodigoActivo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNombre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbDispositivo.Properties)).EndInit();
@@ -412,16 +414,14 @@ namespace INVEQUIPOS_UI.Catalogos
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtActivo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtIdEquipo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             this.ResumeLayout(false);
 
         }

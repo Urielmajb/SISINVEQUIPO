@@ -30,5 +30,11 @@ namespace INVEQUIPOS_UI.Menu
             //frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
+
+        private void barButtonPersonas_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmListarPersona frm = FrmListarPersona.instance();
+            frm.Show();
+        }
     }
 }

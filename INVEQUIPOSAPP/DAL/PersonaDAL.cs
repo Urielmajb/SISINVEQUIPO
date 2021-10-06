@@ -40,14 +40,14 @@ namespace DAL
             if (DT.Rows.Count > 0)
             {
 
-                oPersonaEntity.IDPersona = (int)DT.Rows[0][1];
-                oPersonaEntity.Nombre = DT.Rows[0][2].ToString();
-                oPersonaEntity.Apellido = DT.Rows[0][3].ToString();
-                oPersonaEntity.Cargo = DT.Rows[0][4].ToString();
-                oPersonaEntity.Area = DT.Rows[0][5].ToString();
-                oPersonaEntity.ACTIVO = DT.Rows[0][6].ToString();
-                oPersonaEntity.Fechaprestamo = (DateTime)DT.Rows[0][7];
-                oPersonaEntity.FechaEntrega = (DateTime)DT.Rows[0][8];
+                oPersonaEntity.IDPersona = (int)DT.Rows[0][0];
+                oPersonaEntity.Nombre = DT.Rows[0][1].ToString();
+                oPersonaEntity.Apellido = DT.Rows[0][2].ToString();
+                oPersonaEntity.Cargo = DT.Rows[0][3].ToString();
+                oPersonaEntity.Area = DT.Rows[0][4].ToString();
+                oPersonaEntity.ACTIVO = DT.Rows[0][5].ToString();
+                oPersonaEntity.Fechaprestamo = (DateTime)DT.Rows[0][6];
+                oPersonaEntity.FechaEntrega = (DateTime)DT.Rows[0][7];
 
             }
 
@@ -59,7 +59,7 @@ namespace DAL
             int Exito = 0;
             try
             {
-                Exito = fn.Guardar("Usp_Ins_Personas", oPersonaEntity.IDPersona, oPersonaEntity.Nombre, oPersonaEntity.Apellido,
+                Exito = fn.Guardar("Usp_Ins_Personas", oPersonaEntity.Nombre, oPersonaEntity.Apellido,
                                                      oPersonaEntity.Cargo, oPersonaEntity.Area, oPersonaEntity.ACTIVO,
                                                      oPersonaEntity.Fechaprestamo, oPersonaEntity.FechaEntrega);
             }
