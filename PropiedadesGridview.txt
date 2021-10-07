@@ -1,0 +1,2 @@
+OptionsFind = ShowClearButton = False, AlwaysVisible = True
+OptionsView = ShowAutoFilterRow = True, ShowGroupPanel = False

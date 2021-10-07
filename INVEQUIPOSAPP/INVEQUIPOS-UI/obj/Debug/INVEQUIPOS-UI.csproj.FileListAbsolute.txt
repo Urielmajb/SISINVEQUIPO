@@ -101,3 +101,5 @@ C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INV
 C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Catalogos.FrmEquipo.resources
 C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Catalogos.FrmListarPersona.resources
 C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Catalogos.FrmAgregarPersona.resources
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Catalogos.FrmAgregarDispositivo.resources
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Catalogos.FrmListadoDispositivos.resources

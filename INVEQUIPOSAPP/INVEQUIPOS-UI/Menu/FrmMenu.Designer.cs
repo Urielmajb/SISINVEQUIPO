@@ -34,11 +34,12 @@ namespace INVEQUIPOS_UI.Menu
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonEquipo = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonPersonas = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonDispositivo = new DevExpress.XtraBars.BarButtonItem();
             this.TxtServidor = new DevExpress.XtraBars.BarStaticItem();
             this.TxtBD = new DevExpress.XtraBars.BarStaticItem();
             this.TxtUsuario = new DevExpress.XtraBars.BarStaticItem();
             this.TxtFecha = new DevExpress.XtraBars.BarStaticItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonDispositivo = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -60,13 +61,14 @@ namespace INVEQUIPOS_UI.Menu
             this.ribbonControl1.SearchEditItem,
             this.barButtonEquipo,
             this.barButtonPersonas,
-            this.barButtonDispositivo,
             this.TxtServidor,
             this.TxtBD,
             this.TxtUsuario,
-            this.TxtFecha});
+            this.TxtFecha,
+            this.barButtonItem1,
+            this.barButtonDispositivo});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 8;
+            this.ribbonControl1.MaxItemId = 10;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -91,13 +93,6 @@ namespace INVEQUIPOS_UI.Menu
             this.barButtonPersonas.ImageOptions.SvgImage = global::INVEQUIPOS_UI.Properties.Resources.bo_employee;
             this.barButtonPersonas.Name = "barButtonPersonas";
             this.barButtonPersonas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonPersonas_ItemClick);
-            // 
-            // barButtonDispositivo
-            // 
-            this.barButtonDispositivo.Caption = "Dispositivo";
-            this.barButtonDispositivo.Id = 3;
-            this.barButtonDispositivo.ImageOptions.SvgImage = global::INVEQUIPOS_UI.Properties.Resources.electronics_mouse;
-            this.barButtonDispositivo.Name = "barButtonDispositivo";
             // 
             // TxtServidor
             // 
@@ -135,6 +130,20 @@ namespace INVEQUIPOS_UI.Menu
             this.TxtFecha.Name = "TxtFecha";
             this.TxtFecha.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Reuniones ";
+            this.barButtonItem1.Id = 8;
+            this.barButtonItem1.ImageOptions.SvgImage = global::INVEQUIPOS_UI.Properties.Resources.meeting;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonDispositivo
+            // 
+            this.barButtonDispositivo.Caption = "Dispositivos ";
+            this.barButtonDispositivo.Id = 9;
+            this.barButtonDispositivo.ImageOptions.SvgImage = global::INVEQUIPOS_UI.Properties.Resources.electronics_mouse1;
+            this.barButtonDispositivo.Name = "barButtonDispositivo";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -157,13 +166,16 @@ namespace INVEQUIPOS_UI.Menu
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2});
+            this.ribbonPage3.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.switchtimescalesto_16x16;
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "Reuniones";
             // 
             // ribbonPageGroup2
             // 
+            this.ribbonPageGroup2.AllowTextClipping = false;
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Eventos Realizados";
             // 
             // ribbonPage4
             // 
@@ -239,7 +251,6 @@ namespace INVEQUIPOS_UI.Menu
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.BarButtonItem barButtonEquipo;
         private DevExpress.XtraBars.BarButtonItem barButtonPersonas;
-        private DevExpress.XtraBars.BarButtonItem barButtonDispositivo;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
@@ -250,5 +261,7 @@ namespace INVEQUIPOS_UI.Menu
         private DevExpress.XtraBars.BarStaticItem TxtBD;
         private DevExpress.XtraBars.BarStaticItem TxtUsuario;
         private DevExpress.XtraBars.BarStaticItem TxtFecha;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonDispositivo;
     }
 }

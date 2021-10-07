@@ -153,12 +153,12 @@ namespace INVEQUIPOS_UI.Catalogos
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(306, 12);
+            this.labelControl1.Location = new System.Drawing.Point(251, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(152, 19);
+            this.labelControl1.Size = new System.Drawing.Size(262, 19);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 4;
-            this.labelControl1.Text = "Listado de Equipos";
+            this.labelControl1.Text = "Listado de Equipos Tecnologicos";
             // 
             // Root
             // 

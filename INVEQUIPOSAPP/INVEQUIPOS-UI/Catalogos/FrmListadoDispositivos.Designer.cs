@@ -1,7 +1,7 @@
 ﻿
 namespace INVEQUIPOS_UI.Catalogos
 {
-    partial class FrmListarPersona
+    partial class FrmListadoDispositivos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace INVEQUIPOS_UI.Catalogos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListarPersona));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListadoDispositivos));
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.BtnCerrar = new DevExpress.XtraEditors.SimpleButton();
@@ -41,26 +41,26 @@ namespace INVEQUIPOS_UI.Catalogos
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -75,68 +75,58 @@ namespace INVEQUIPOS_UI.Catalogos
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1008, 443);
+            this.layoutControl1.Size = new System.Drawing.Size(800, 450);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // BtnCerrar
             // 
-            this.BtnCerrar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.cancel_32x322;
+            this.BtnCerrar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.cancel_32x324;
             this.BtnCerrar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnCerrar.Location = new System.Drawing.Point(614, 395);
+            this.BtnCerrar.Location = new System.Drawing.Point(494, 402);
             this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(89, 36);
+            this.BtnCerrar.Size = new System.Drawing.Size(87, 36);
             this.BtnCerrar.StyleController = this.layoutControl1;
-            this.BtnCerrar.TabIndex = 7;
-            this.BtnCerrar.ToolTip = "Cerrar";
-            this.BtnCerrar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Error;
+            this.BtnCerrar.TabIndex = 9;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // BtnExportar
             // 
-            this.BtnExportar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.exporttopdf_32x321;
+            this.BtnExportar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.exporttopdf_32x322;
             this.BtnExportar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnExportar.Location = new System.Drawing.Point(521, 395);
+            this.BtnExportar.Location = new System.Drawing.Point(407, 402);
             this.BtnExportar.Name = "BtnExportar";
-            this.BtnExportar.Size = new System.Drawing.Size(89, 36);
+            this.BtnExportar.Size = new System.Drawing.Size(83, 36);
             this.BtnExportar.StyleController = this.layoutControl1;
-            this.BtnExportar.TabIndex = 6;
-            this.BtnExportar.ToolTip = "Exportar";
-            this.BtnExportar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.BtnExportar.TabIndex = 8;
             // 
             // BtnEditar
             // 
-            this.BtnEditar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.editname_32x322;
+            this.BtnEditar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.editname_32x323;
             this.BtnEditar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnEditar.Location = new System.Drawing.Point(428, 395);
+            this.BtnEditar.Location = new System.Drawing.Point(314, 402);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(89, 36);
             this.BtnEditar.StyleController = this.layoutControl1;
-            this.BtnEditar.TabIndex = 5;
-            this.BtnEditar.ToolTip = "Editar";
-            this.BtnEditar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            this.BtnEditar.TabIndex = 7;
             // 
             // BtnNuevo
             // 
-            this.BtnNuevo.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.newcomment_32x321;
+            this.BtnNuevo.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.newcomment_32x322;
             this.BtnNuevo.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnNuevo.Location = new System.Drawing.Point(335, 395);
+            this.BtnNuevo.Location = new System.Drawing.Point(227, 402);
             this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(89, 36);
+            this.BtnNuevo.Size = new System.Drawing.Size(83, 36);
             this.BtnNuevo.StyleController = this.layoutControl1;
-            this.BtnNuevo.TabIndex = 4;
-            this.BtnNuevo.ToolTip = "Nuevo";
-            this.BtnNuevo.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Exclamation;
-            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
+            this.BtnNuevo.TabIndex = 6;
             // 
             // gridControl1
             // 
             this.gridControl1.Location = new System.Drawing.Point(12, 35);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(984, 356);
-            this.gridControl1.TabIndex = 0;
+            this.gridControl1.Size = new System.Drawing.Size(776, 363);
+            this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -153,12 +143,13 @@ namespace INVEQUIPOS_UI.Catalogos
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(343, 12);
+            this.labelControl1.Location = new System.Drawing.Point(275, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(321, 19);
+            this.labelControl1.Size = new System.Drawing.Size(250, 19);
             this.labelControl1.StyleController = this.layoutControl1;
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Listado de Responsables de los Equipos";
+            this.labelControl1.TabIndex = 4;
+            this.labelControl1.Text = "Listado de Dispositivos Activos";
+            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // Root
             // 
@@ -166,15 +157,15 @@ namespace INVEQUIPOS_UI.Catalogos
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.emptySpaceItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem6,
-            this.emptySpaceItem2});
+            this.emptySpaceItem2,
+            this.emptySpaceItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1008, 443);
+            this.Root.Size = new System.Drawing.Size(800, 450);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -183,37 +174,27 @@ namespace INVEQUIPOS_UI.Catalogos
             this.layoutControlItem1.Control = this.labelControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(988, 23);
+            this.layoutControlItem1.Size = new System.Drawing.Size(780, 23);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(695, 383);
-            this.emptySpaceItem1.MinSize = new System.Drawing.Size(10, 10);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(293, 40);
-            this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(988, 360);
+            this.layoutControlItem2.Size = new System.Drawing.Size(780, 367);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.BtnNuevo;
-            this.layoutControlItem3.Location = new System.Drawing.Point(323, 383);
-            this.layoutControlItem3.MaxSize = new System.Drawing.Size(93, 40);
-            this.layoutControlItem3.MinSize = new System.Drawing.Size(93, 40);
+            this.layoutControlItem3.Location = new System.Drawing.Point(215, 390);
+            this.layoutControlItem3.MaxSize = new System.Drawing.Size(87, 40);
+            this.layoutControlItem3.MinSize = new System.Drawing.Size(87, 40);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(93, 40);
+            this.layoutControlItem3.Size = new System.Drawing.Size(87, 40);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
@@ -221,7 +202,7 @@ namespace INVEQUIPOS_UI.Catalogos
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.BtnEditar;
-            this.layoutControlItem4.Location = new System.Drawing.Point(416, 383);
+            this.layoutControlItem4.Location = new System.Drawing.Point(302, 390);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(93, 40);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(93, 40);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -233,11 +214,11 @@ namespace INVEQUIPOS_UI.Catalogos
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.BtnExportar;
-            this.layoutControlItem5.Location = new System.Drawing.Point(509, 383);
-            this.layoutControlItem5.MaxSize = new System.Drawing.Size(93, 40);
-            this.layoutControlItem5.MinSize = new System.Drawing.Size(93, 40);
+            this.layoutControlItem5.Location = new System.Drawing.Point(395, 390);
+            this.layoutControlItem5.MaxSize = new System.Drawing.Size(87, 40);
+            this.layoutControlItem5.MinSize = new System.Drawing.Size(87, 40);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(93, 40);
+            this.layoutControlItem5.Size = new System.Drawing.Size(87, 40);
             this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
@@ -245,11 +226,11 @@ namespace INVEQUIPOS_UI.Catalogos
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.BtnCerrar;
-            this.layoutControlItem6.Location = new System.Drawing.Point(602, 383);
-            this.layoutControlItem6.MaxSize = new System.Drawing.Size(93, 40);
-            this.layoutControlItem6.MinSize = new System.Drawing.Size(93, 40);
+            this.layoutControlItem6.Location = new System.Drawing.Point(482, 390);
+            this.layoutControlItem6.MaxSize = new System.Drawing.Size(91, 40);
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(91, 40);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(93, 40);
+            this.layoutControlItem6.Size = new System.Drawing.Size(91, 40);
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
@@ -257,38 +238,42 @@ namespace INVEQUIPOS_UI.Catalogos
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 383);
-            this.emptySpaceItem2.MinSize = new System.Drawing.Size(10, 10);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 390);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(323, 40);
-            this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem2.Size = new System.Drawing.Size(215, 40);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // FrmListarPersona
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(573, 390);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(207, 40);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // FrmListadoDispositivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 443);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmListarPersona.IconOptions.Icon")));
-            this.Name = "FrmListarPersona";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado Personas";
-            this.Load += new System.EventHandler(this.FrmListarPersona_Load);
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmListadoDispositivos.IconOptions.Icon")));
+            this.Name = "FrmListadoDispositivos";
+            this.Text = "Listado Dispositivos";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,7 +283,6 @@ namespace INVEQUIPOS_UI.Catalogos
         private DevExpress.XtraBars.FormAssistant formAssistant1;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraGrid.GridControl gridControl1;
@@ -313,5 +297,6 @@ namespace INVEQUIPOS_UI.Catalogos
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
     }
 }
