@@ -1,3 +1,5 @@
+--DBA_Generate_SQL_Structure 'DBEquipo','dbo','tblReunion'
+
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 PRINT ' dbo.Usp_Sel_Reunion'
 GO
@@ -15,9 +17,6 @@ IF @ID = 0
 	INNER JOIN tblTipoReunion T ON T.ID_Tipo = R.ID_Tipo
 ELSE 
 	SELECT * FROM dbo.tblReunion WHERE IDReunion =@ID
-
-
-
 GO
  
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
@@ -83,5 +82,3 @@ BEGIN CATCH
 	RAISERROR(@ErrMsg, @ErrSeverity, 1)
 END CATCH
 GO
- 
-

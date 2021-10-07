@@ -14,6 +14,7 @@ namespace Entity
 
         public int IDPersona { get; set; }
 
+        public int ID_Equipo { get; set; }
         public int ID_Tipo { get; set; }
 
         public string NOM_REUNION { get; set; }

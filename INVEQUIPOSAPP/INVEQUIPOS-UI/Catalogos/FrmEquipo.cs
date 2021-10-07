@@ -66,6 +66,12 @@ namespace INVEQUIPOS_UI.Catalogos
                 result = false;
             }
 
+            if (string.IsNullOrEmpty(this.TxtCantidad.Text))
+            {
+                Error.SetError(TxtCantidad, "Cantidad no puede ser vacio");
+                result = false;
+            }
+
             return result;
         }
 
@@ -77,6 +83,7 @@ namespace INVEQUIPOS_UI.Catalogos
             TxtCodigoActivo.Text = "";
             BtnBaja.Enabled = false;
             TxtActivo.Text = "A";
+            TxtCantidad.Text = "";
         }
 
         #endregion
@@ -104,6 +111,7 @@ namespace INVEQUIPOS_UI.Catalogos
                 TxtNombre.Text = oEquipoEntity.NOM_EQUIPO.ToString();
                 TxtCodigoActivo.Text = oEquipoEntity.CODIGO_ACTIVO.ToString();
                 TxtActivo.Text = oEquipoEntity.ACTIVO.ToString();
+                TxtCantidad.Text = oEquipoEntity.CANTIDAD.ToString();
                 BtnBaja.Enabled = true;
 
             }
@@ -129,6 +137,7 @@ namespace INVEQUIPOS_UI.Catalogos
             oEquipoEntity.NOM_EQUIPO = TxtNombre.Text;
             oEquipoEntity.CODIGO_ACTIVO = TxtCodigoActivo.Text;
             oEquipoEntity.ACTIVO = TxtActivo.Text;
+            oEquipoEntity.CANTIDAD = int.Parse(TxtCantidad.Text);
 
             if (oEquipo.Guardar(oEquipoEntity) < 0)
             {

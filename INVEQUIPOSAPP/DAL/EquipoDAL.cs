@@ -58,7 +58,7 @@ namespace DAL
                 oEquipoEntity.NOM_EQUIPO = DT.Rows[0][2].ToString();
                 oEquipoEntity.CODIGO_ACTIVO = DT.Rows[0][3].ToString();
                 oEquipoEntity.ACTIVO = DT.Rows[0][4].ToString();
-
+                oEquipoEntity.CANTIDAD = (int)DT.Rows[0][5];
             }
 
             return oEquipoEntity;
@@ -70,7 +70,7 @@ namespace DAL
             try
             {
                 Exito = fn.Guardar("Usp_Ins_Equipo", oEquipoEntity.ID_dispo, oEquipoEntity.NOM_EQUIPO, 
-                                                     oEquipoEntity.CODIGO_ACTIVO, oEquipoEntity.ACTIVO);
+                                                     oEquipoEntity.CODIGO_ACTIVO, oEquipoEntity.ACTIVO, oEquipoEntity.CANTIDAD);
             }
             catch
             {
@@ -87,7 +87,7 @@ namespace DAL
             try
             {
                 Exito = fn.Guardar("Usp_Upd_Equipo", oEquipoEntity.ID_Equipo, oEquipoEntity.ID_dispo, oEquipoEntity.NOM_EQUIPO,
-                                                     oEquipoEntity.CODIGO_ACTIVO, oEquipoEntity.ACTIVO);
+                                                     oEquipoEntity.CODIGO_ACTIVO, oEquipoEntity.ACTIVO, oEquipoEntity.CANTIDAD);
             }
             catch
             {

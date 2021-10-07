@@ -17,5 +17,7 @@ namespace Entity
 
         public string ACTIVO { get; set; }
 
+        public int CANTIDAD { get; set; }
+
     }
 }
