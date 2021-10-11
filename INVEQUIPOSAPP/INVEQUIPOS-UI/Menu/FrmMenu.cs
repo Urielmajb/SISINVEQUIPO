@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using INVEQUIPOS_UI.Reuniones;
 
 namespace INVEQUIPOS_UI.Menu
 {
@@ -34,6 +35,12 @@ namespace INVEQUIPOS_UI.Menu
         private void barButtonPersonas_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmListarPersona frm = FrmListarPersona.instance();
+            frm.Show();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmListadoReuniones frm = FrmListadoReuniones.instance();
             frm.Show();
         }
     }

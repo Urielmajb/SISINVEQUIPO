@@ -54,5 +54,15 @@ namespace INVEQUIPOS_UI.Reuniones
         {
 
         }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

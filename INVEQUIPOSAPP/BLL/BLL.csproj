@@ -44,6 +44,7 @@
     <Compile Include="EquipoBLL.cs" />
     <Compile Include="PersonaBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReunionBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

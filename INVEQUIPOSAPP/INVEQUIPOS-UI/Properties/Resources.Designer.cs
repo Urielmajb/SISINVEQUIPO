@@ -203,6 +203,16 @@ namespace INVEQUIPOS_UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_32x325 {
+            get {
+                object obj = ResourceManager.GetObject("cancel_32x325", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap database_16x16 {
             get {
                 object obj = ResourceManager.GetObject("database_16x16", resourceCulture);
@@ -301,6 +311,16 @@ namespace INVEQUIPOS_UI.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editname_32x324 {
+            get {
+                object obj = ResourceManager.GetObject("editname_32x324", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage electronics_laptopwindows {
@@ -361,6 +381,16 @@ namespace INVEQUIPOS_UI.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exporttopdf_32x323 {
+            get {
+                object obj = ResourceManager.GetObject("exporttopdf_32x323", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage meeting {
@@ -396,6 +426,16 @@ namespace INVEQUIPOS_UI.Properties {
         internal static System.Drawing.Bitmap newcomment_32x322 {
             get {
                 object obj = ResourceManager.GetObject("newcomment_32x322", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap newcomment_32x323 {
+            get {
+                object obj = ResourceManager.GetObject("newcomment_32x323", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

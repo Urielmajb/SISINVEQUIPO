@@ -1,6 +1,8 @@
 --DBA_Generate_SQL_Structure 'DBEquipo','dbo','tblReunion'
 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+--DBA_Generate_SQL_Structure 'DBEquipo','dbo','tblReunion'
+
+
 PRINT ' dbo.Usp_Sel_Reunion'
 GO
 CREATE PROCEDURE dbo.Usp_Sel_Reunion
@@ -8,12 +10,10 @@ CREATE PROCEDURE dbo.Usp_Sel_Reunion
  AS
 SET NOCOUNT ON
 IF @ID = 0
-	SELECT R.IDReunion, R.ID_dispo, D.Dispositivo AS Nombre_Dispositivo, R.IDPersona, P.Nombre AS NombreCompleto, 
-	R.ID_Equipo, E.NOM_EQUIPO, R.ID_Tipo, E.TipoReunion
+
+	SELECT R.IDReunion, R.IDPersona, P.Nombre AS NombreCompleto,  R.ID_Tipo, E.TipoReunion
 	FROM 
-	dbo.tblReunion R INNER JOIN tblDispositivo D on D.ID_dispo = R.ID_dispo
-	INNER JOIN tblPersona P on P.IDPersona = R.IDPersona
-	INNER JOIN tblEquipo E ON E.ID_Equipo = R.ID_Equipo
+	dbo.tblReunion R INNER JOIN IDPersona P on P.IDPersona = R.IDPersona
 	INNER JOIN tblTipoReunion T ON T.ID_Tipo = R.ID_Tipo
 ELSE 
 	SELECT * FROM dbo.tblReunion WHERE IDReunion =@ID
@@ -22,10 +22,10 @@ GO
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 PRINT ' dbo.Usp_Ins_Reunion'
 GO
-CREATE PROCEDURE dbo.Usp_Ins_Reunion ( @ID_dispo AS int, @IDPersona AS int, @ID_Equipo AS int, @ID_Tipo AS int, @NOM_REUNION AS varchar(200), @fecharealizada AS date, @hora AS varchar(10) )  AS
+CREATE PROCEDURE dbo.Usp_Ins_Reunion ( @IDPersona AS int, @ID_Tipo AS int, @NOM_REUNION AS varchar(200), @fecharealizada AS date, @hora AS varchar(10) )  AS
 BEGIN TRY
-	INSERT INTO dbo.tblReunion ( ID_dispo, IDPersona, ID_Equipo, ID_Tipo, NOM_REUNION, fecharealizada, hora ) 
-	VALUES  ( @ID_dispo, @IDPersona, @ID_Equipo, @ID_Tipo, @NOM_REUNION, @fecharealizada, @hora ) 
+	INSERT INTO dbo.tblReunion ( IDPersona, ID_Tipo, NOM_REUNION, fecharealizada, hora ) 
+	VALUES  ( @IDPersona, @ID_Tipo, @NOM_REUNION, @fecharealizada, @hora ) 
 END TRY
 BEGIN CATCH
 	-- Raise an error with the details of the exception
@@ -40,12 +40,10 @@ GO
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 PRINT ' dbo.Usp_Upd_Reunion'
 GO
-CREATE PROCEDURE dbo.Usp_Upd_Reunion ( @IDReunion AS int, @ID_dispo AS int, @IDPersona AS int, @ID_Equipo AS int, @ID_Tipo AS int, @NOM_REUNION AS varchar(200), @fecharealizada AS date, @hora AS varchar(10) )  AS
+CREATE PROCEDURE dbo.Usp_Upd_Reunion ( @IDReunion AS int, @IDPersona AS int, @ID_Tipo AS int, @NOM_REUNION AS varchar(200), @fecharealizada AS date, @hora AS varchar(10) )  AS
 BEGIN TRY
 	UPDATE dbo.tblReunion
-	SET ID_dispo = @ID_dispo
-		, IDPersona = @IDPersona
-		, ID_Equipo = @ID_Equipo
+	SET IDPersona = @IDPersona
 		, ID_Tipo = @ID_Tipo
 		, NOM_REUNION = @NOM_REUNION
 		, fecharealizada = @fecharealizada
@@ -82,3 +80,4 @@ BEGIN CATCH
 	RAISERROR(@ErrMsg, @ErrSeverity, 1)
 END CATCH
 GO
+

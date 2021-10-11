@@ -136,6 +136,7 @@ namespace INVEQUIPOS_UI.Menu
             this.barButtonItem1.Id = 8;
             this.barButtonItem1.ImageOptions.SvgImage = global::INVEQUIPOS_UI.Properties.Resources.meeting;
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonDispositivo
             // 
