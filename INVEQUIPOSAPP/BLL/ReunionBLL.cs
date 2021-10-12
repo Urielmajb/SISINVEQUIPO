@@ -15,8 +15,7 @@ namespace BLL
         
         ReunionesDAL oReuniones = new ReunionesDAL();
 
-  
-
+ 
         public DataTable Construir_Grid_Equipo()
         {
             return oReuniones.Construir_Grid_Equipo();

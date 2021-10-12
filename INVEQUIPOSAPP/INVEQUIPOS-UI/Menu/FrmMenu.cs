@@ -40,8 +40,8 @@ namespace INVEQUIPOS_UI.Menu
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmListadoReuniones frm = FrmListadoReuniones.instance();
-            frm.Show();
+            //FrmListadoReuniones frm = FrmListadoReuniones.instance();
+            //frm.Show();
         }
     }
 }

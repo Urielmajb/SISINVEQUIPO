@@ -133,6 +133,16 @@ namespace INVEQUIPOS_UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boreport2_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("boreport2_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bouser_16x16 {
             get {
                 object obj = ResourceManager.GetObject("bouser_16x16", resourceCulture);
@@ -316,6 +326,16 @@ namespace INVEQUIPOS_UI.Properties {
         internal static System.Drawing.Bitmap editname_32x324 {
             get {
                 object obj = ResourceManager.GetObject("editname_32x324", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editrangepermission_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("editrangepermission_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

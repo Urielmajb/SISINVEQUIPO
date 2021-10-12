@@ -39,7 +39,6 @@ namespace INVEQUIPOS_UI.Menu
             this.TxtUsuario = new DevExpress.XtraBars.BarStaticItem();
             this.TxtFecha = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonDispositivo = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -65,8 +64,7 @@ namespace INVEQUIPOS_UI.Menu
             this.TxtBD,
             this.TxtUsuario,
             this.TxtFecha,
-            this.barButtonItem1,
-            this.barButtonDispositivo});
+            this.barButtonItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 10;
             this.ribbonControl1.Name = "ribbonControl1";
@@ -138,13 +136,6 @@ namespace INVEQUIPOS_UI.Menu
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
-            // barButtonDispositivo
-            // 
-            this.barButtonDispositivo.Caption = "Dispositivos ";
-            this.barButtonDispositivo.Id = 9;
-            this.barButtonDispositivo.ImageOptions.SvgImage = global::INVEQUIPOS_UI.Properties.Resources.electronics_mouse1;
-            this.barButtonDispositivo.Name = "barButtonDispositivo";
-            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -159,7 +150,6 @@ namespace INVEQUIPOS_UI.Menu
             this.ribbonPageGroup1.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.openhyperlink_32x32;
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonEquipo);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonPersonas);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonDispositivo);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Alta de Catalogos";
             // 
@@ -182,6 +172,7 @@ namespace INVEQUIPOS_UI.Menu
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3});
+            this.ribbonPage4.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.boreport2_16x16;
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Reportes";
             // 
@@ -194,6 +185,7 @@ namespace INVEQUIPOS_UI.Menu
             // 
             this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4});
+            this.ribbonPage5.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.editrangepermission_16x16;
             this.ribbonPage5.Name = "ribbonPage5";
             this.ribbonPage5.Text = "Seguridad";
             // 
@@ -263,6 +255,5 @@ namespace INVEQUIPOS_UI.Menu
         private DevExpress.XtraBars.BarStaticItem TxtUsuario;
         private DevExpress.XtraBars.BarStaticItem TxtFecha;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonDispositivo;
     }
 }

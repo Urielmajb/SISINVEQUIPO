@@ -76,5 +76,10 @@ namespace INVEQUIPOS_UI.Catalogos
             frm.ShowDialog();
             Cargar();
         }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
