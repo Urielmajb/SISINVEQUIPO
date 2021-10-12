@@ -32,35 +32,6 @@ namespace DAL
             return DT;
         }
 
-        public DataTable Construir_Grid_Equipo()
-        {
-            var DT = new DataTable();
-            try
-            {   // carga todos los datos al combobox
-                DT = fn.Leer("Usp_Construir_Grid_Equipo");
-            }
-            catch (Exception ex)
-            {
-                throw new System.ArgumentException(ex.Message);
-            }
-            return DT;
-        }
-
-        public DataTable Construir_Grid_Dispositivo()
-        {
-            var DT = new DataTable();
-            try
-            {   // carga todos los datos al combobox
-                DT = fn.Leer("Usp_Construir_Grid_Dispositivo");
-            }
-            catch (Exception ex)
-            {
-                throw new System.ArgumentException(ex.Message);
-            }
-            return DT;
-        }
-
-
         //Referencia a la tabla persona, donde la usaremos para cargar el Cmbx
 
         public DataTable ListarPersona()
@@ -101,7 +72,50 @@ namespace DAL
             return DT;
         }
 
+        public ReunionEntity Obtener(int IDReunion)
+        {
+            var oReunionEntity = new ReunionEntity();
+            var DT = fn.Leer("Usp_Sel_Reunion", IDReunion);
+            if (DT.Rows.Count > 0)
+            {
+                oReunionEntity.IDReunion = (int)DT.Rows[0][0];
+                oReunionEntity.IDPersona = (int)DT.Rows[0][1];
+                oReunionEntity.ID_Tipo = (int)DT.Rows[0][2];
+                oReunionEntity.NOM_REUNION = DT.Rows[0][3].ToString();
+                oReunionEntity.fecharealizada = (DateTime)DT.Rows[0][4];
+                oReunionEntity.hora = DT.Rows[0][5].ToString();
 
+            }
+            return oReunionEntity;
+        }
+
+        //public DataTable Construir_Grid_Equipo()
+        //{
+        //    var DT = new DataTable();
+        //    try
+        //    {   // carga todos los datos al combobox
+        //        DT = fn.Leer("Usp_Construir_Grid_Equipo");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new System.ArgumentException(ex.Message);
+        //    }
+        //    return DT;
+        //}
+
+        //public DataTable Construir_Grid_Dispositivo()
+        //{
+        //    var DT = new DataTable();
+        //    try
+        //    {   // carga todos los datos al combobox
+        //        DT = fn.Leer("Usp_Construir_Grid_Dispositivo");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new System.ArgumentException(ex.Message);
+        //    }
+        //    return DT;
+        //}
 
 
 

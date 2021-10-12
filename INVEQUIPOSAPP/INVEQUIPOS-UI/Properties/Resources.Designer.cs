@@ -223,6 +223,16 @@ namespace INVEQUIPOS_UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_32x326 {
+            get {
+                object obj = ResourceManager.GetObject("cancel_32x326", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap database_16x16 {
             get {
                 object obj = ResourceManager.GetObject("database_16x16", resourceCulture);
@@ -276,6 +286,16 @@ namespace INVEQUIPOS_UI.Properties {
         internal static System.Drawing.Bitmap download_32x321 {
             get {
                 object obj = ResourceManager.GetObject("download_32x321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download_32x322 {
+            get {
+                object obj = ResourceManager.GetObject("download_32x322", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -326,5 +326,11 @@
   <ItemGroup>
     <None Include="Resources\editrangepermission_16x16.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x326.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,41 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using INVEQUIPOS_UI.Catalogos;
+
 
 namespace INVEQUIPOS_UI.Reuniones
 {
     public partial class FrmListadoReuniones : DevExpress.XtraEditors.XtraForm
     {
-        //#region
-        ////Instanciamos la clase de Productos BLL
+        #region
+        //Instanciamos la clase 
 
-        //Reuniones oPersona = new PersonaBLL();
+        ReunionBLL oReuniones = new ReunionBLL();
 
-        ////Instanciamos una unica vez el formulario
-        //private static FrmListadoReuniones Childinstance = null;
+        //Instanciamos una unica vez el formulario
+        private static FrmListadoReuniones Childinstance = null;
 
-        //public static FrmListadoReuniones instance()
-        //{
-        //    if (Childinstance == null || Childinstance.IsDisposed == true)
-        //    {
-        //        Childinstance = new FrmListadoReuniones();
-        //        Childinstance.BringToFront();
-        //    }
-        //    return Childinstance;
-        //}
-
-        ////public void Cargar()
-        ////{
-        ////    gridControl1.DataSource = oPersona.Listar();
-        ////    gridView1.PopulateColumns();
-        ////    gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
-        ////    gridView1.OptionsView.ColumnAutoWidth = false;
-        ////    Variables.FormatoGrid(ref gridView1);
-        ////    gridView1.Columns["Nombre"].Width = 250;
-        ////}
+        public static FrmListadoReuniones instance()
+        {
+            if (Childinstance == null || Childinstance.IsDisposed == true)
+            {
+                Childinstance = new FrmListadoReuniones();
+                Childinstance.BringToFront();
+            }
+            return Childinstance;
+        }
 
 
-        //#endregion
+
+        #endregion
 
 
 
@@ -62,7 +56,9 @@ namespace INVEQUIPOS_UI.Reuniones
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-
+           // Variables.gID = -1;
+            FrmAgregarReuniones frm = FrmAgregarReuniones.instance();
+            frm.ShowDialog();
         }
     }
 }

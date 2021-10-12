@@ -259,6 +259,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FrmListadoReuniones.IconOptions.Image")));
             this.Name = "FrmListadoReuniones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Reuniones";
             this.Load += new System.EventHandler(this.FrmListadoReuniones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

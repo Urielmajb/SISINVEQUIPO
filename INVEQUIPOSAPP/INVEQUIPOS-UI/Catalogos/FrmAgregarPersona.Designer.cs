@@ -33,6 +33,10 @@ namespace INVEQUIPOS_UI.Catalogos
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgregarPersona));
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.BtnCerrar = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnTiempoEntrega = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnNuevo = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnGrabar = new DevExpress.XtraEditors.SimpleButton();
             this.TxtFechaEntrega = new DevExpress.XtraEditors.DateEdit();
             this.TxtFechaPrestamo = new DevExpress.XtraEditors.DateEdit();
             this.TxtEstado = new DevExpress.XtraEditors.TextEdit();
@@ -51,19 +55,15 @@ namespace INVEQUIPOS_UI.Catalogos
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Error = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.BtnCerrar = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnTiempoEntrega = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnNuevo = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnGrabar = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaEntrega.Properties.CalendarTimeProperties)).BeginInit();
@@ -85,15 +85,15 @@ namespace INVEQUIPOS_UI.Catalogos
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -119,6 +119,48 @@ namespace INVEQUIPOS_UI.Catalogos
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.cancel_32x323;
+            this.BtnCerrar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.BtnCerrar.Location = new System.Drawing.Point(408, 155);
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(88, 36);
+            this.BtnCerrar.StyleController = this.layoutControl1;
+            this.BtnCerrar.TabIndex = 16;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // BtnTiempoEntrega
+            // 
+            this.BtnTiempoEntrega.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.deletegroupfooter_32x32;
+            this.BtnTiempoEntrega.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.BtnTiempoEntrega.Location = new System.Drawing.Point(312, 155);
+            this.BtnTiempoEntrega.Name = "BtnTiempoEntrega";
+            this.BtnTiempoEntrega.Size = new System.Drawing.Size(92, 36);
+            this.BtnTiempoEntrega.StyleController = this.layoutControl1;
+            this.BtnTiempoEntrega.TabIndex = 15;
+            // 
+            // BtnNuevo
+            // 
+            this.BtnNuevo.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.newcontact_32x321;
+            this.BtnNuevo.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.BtnNuevo.Location = new System.Drawing.Point(226, 155);
+            this.BtnNuevo.Name = "BtnNuevo";
+            this.BtnNuevo.Size = new System.Drawing.Size(82, 36);
+            this.BtnNuevo.StyleController = this.layoutControl1;
+            this.BtnNuevo.TabIndex = 14;
+            // 
+            // BtnGrabar
+            // 
+            this.BtnGrabar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.download_32x321;
+            this.BtnGrabar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.BtnGrabar.Location = new System.Drawing.Point(134, 155);
+            this.BtnGrabar.Name = "BtnGrabar";
+            this.BtnGrabar.Size = new System.Drawing.Size(88, 36);
+            this.BtnGrabar.StyleController = this.layoutControl1;
+            this.BtnGrabar.TabIndex = 13;
+            this.BtnGrabar.Click += new System.EventHandler(this.BtnGrabar_Click);
+            // 
             // TxtFechaEntrega
             // 
             this.TxtFechaEntrega.EditValue = null;
@@ -128,6 +170,7 @@ namespace INVEQUIPOS_UI.Catalogos
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.TxtFechaEntrega.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TxtFechaEntrega.Properties.NullText = "DD/MM/YYYY";
             this.TxtFechaEntrega.Size = new System.Drawing.Size(202, 20);
             this.TxtFechaEntrega.StyleController = this.layoutControl1;
             this.TxtFechaEntrega.TabIndex = 12;
@@ -141,6 +184,7 @@ namespace INVEQUIPOS_UI.Catalogos
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.TxtFechaPrestamo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TxtFechaPrestamo.Properties.NullText = "DD/MM/YYYY";
             this.TxtFechaPrestamo.Size = new System.Drawing.Size(191, 20);
             this.TxtFechaPrestamo.StyleController = this.layoutControl1;
             this.TxtFechaPrestamo.TabIndex = 11;
@@ -314,92 +358,6 @@ namespace INVEQUIPOS_UI.Catalogos
             this.layoutControlItem6.Text = "Cargo";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(100, 14);
             // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 143);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(122, 40);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(488, 143);
-            this.emptySpaceItem3.MinSize = new System.Drawing.Size(10, 10);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(119, 40);
-            this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem4.Control = this.TxtApellido;
-            this.layoutControlItem4.Location = new System.Drawing.Point(311, 47);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(296, 24);
-            this.layoutControlItem4.Text = "Apellido";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(100, 14);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem7.Control = this.TxtEstado;
-            this.layoutControlItem7.Location = new System.Drawing.Point(436, 95);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(171, 24);
-            this.layoutControlItem7.Text = "Estado";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(100, 14);
-            // 
-            // Error
-            // 
-            this.Error.ContainerControl = this;
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.cancel_32x323;
-            this.BtnCerrar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnCerrar.Location = new System.Drawing.Point(408, 155);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(88, 36);
-            this.BtnCerrar.StyleController = this.layoutControl1;
-            this.BtnCerrar.TabIndex = 16;
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // BtnTiempoEntrega
-            // 
-            this.BtnTiempoEntrega.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.deletegroupfooter_32x32;
-            this.BtnTiempoEntrega.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnTiempoEntrega.Location = new System.Drawing.Point(312, 155);
-            this.BtnTiempoEntrega.Name = "BtnTiempoEntrega";
-            this.BtnTiempoEntrega.Size = new System.Drawing.Size(92, 36);
-            this.BtnTiempoEntrega.StyleController = this.layoutControl1;
-            this.BtnTiempoEntrega.TabIndex = 15;
-            // 
-            // BtnNuevo
-            // 
-            this.BtnNuevo.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.newcontact_32x321;
-            this.BtnNuevo.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnNuevo.Location = new System.Drawing.Point(226, 155);
-            this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(82, 36);
-            this.BtnNuevo.StyleController = this.layoutControl1;
-            this.BtnNuevo.TabIndex = 14;
-            // 
-            // BtnGrabar
-            // 
-            this.BtnGrabar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.download_32x321;
-            this.BtnGrabar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnGrabar.Location = new System.Drawing.Point(134, 155);
-            this.BtnGrabar.Name = "BtnGrabar";
-            this.BtnGrabar.Size = new System.Drawing.Size(88, 36);
-            this.BtnGrabar.StyleController = this.layoutControl1;
-            this.BtnGrabar.TabIndex = 13;
-            this.BtnGrabar.Click += new System.EventHandler(this.BtnGrabar_Click);
-            // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.BtnGrabar;
@@ -448,6 +406,50 @@ namespace INVEQUIPOS_UI.Catalogos
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 143);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(122, 40);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(488, 143);
+            this.emptySpaceItem3.MinSize = new System.Drawing.Size(10, 10);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(119, 40);
+            this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem4.Control = this.TxtApellido;
+            this.layoutControlItem4.Location = new System.Drawing.Point(311, 47);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(296, 24);
+            this.layoutControlItem4.Text = "Apellido";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(100, 14);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem7.Control = this.TxtEstado;
+            this.layoutControlItem7.Location = new System.Drawing.Point(436, 95);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(171, 24);
+            this.layoutControlItem7.Text = "Estado";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(100, 14);
+            // 
+            // Error
+            // 
+            this.Error.ContainerControl = this;
+            // 
             // FrmAgregarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,7 +463,6 @@ namespace INVEQUIPOS_UI.Catalogos
             this.Load += new System.EventHandler(this.FrmAgregarPersona_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaEntrega.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaEntrega.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaPrestamo.Properties.CalendarTimeProperties)).EndInit();
@@ -481,15 +482,15 @@ namespace INVEQUIPOS_UI.Catalogos
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             this.ResumeLayout(false);
 
         }
