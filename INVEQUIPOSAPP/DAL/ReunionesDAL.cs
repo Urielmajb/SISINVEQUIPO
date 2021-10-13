@@ -39,7 +39,7 @@ namespace DAL
             var DT = new DataTable();
             try
             {
-                DT = fn.Leer("Usp_Sel_Personas", 0);
+                DT = fn.Leer("Usp_Sel_CmbPersonas", 0);
 
             }
             catch (Exception ex)

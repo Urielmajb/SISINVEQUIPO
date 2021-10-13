@@ -99,6 +99,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.BtnExportar.Size = new System.Drawing.Size(85, 36);
             this.BtnExportar.StyleController = this.layoutControl1;
             this.BtnExportar.TabIndex = 8;
+            this.BtnExportar.Click += new System.EventHandler(this.BtnExportar_Click);
             // 
             // BtnEditar
             // 
@@ -109,6 +110,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.BtnEditar.Size = new System.Drawing.Size(85, 36);
             this.BtnEditar.StyleController = this.layoutControl1;
             this.BtnEditar.TabIndex = 7;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnNuevo
             // 

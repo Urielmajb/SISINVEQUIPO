@@ -33,15 +33,16 @@ namespace INVEQUIPOS_UI.Reuniones
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgregarReuniones));
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.TxtIdReunion = new DevExpress.XtraEditors.TextEdit();
             this.BtnCerrar = new DevExpress.XtraEditors.SimpleButton();
             this.BtnGrabar = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CmbTipoReunion = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TxtFechaRealizada = new DevExpress.XtraEditors.DateEdit();
             this.CmbPersona = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtNomReunion = new DevExpress.XtraEditors.MemoEdit();
+            this.CmbTipoReunion = new DevExpress.XtraEditors.LookUpEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -53,16 +54,22 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.Error = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.TxtHora = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtIdReunion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbTipoReunion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaRealizada.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaRealizada.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbPersona.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomReunion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbTipoReunion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -74,19 +81,26 @@ namespace INVEQUIPOS_UI.Reuniones
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtHora.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.TxtHora);
+            this.layoutControl1.Controls.Add(this.TxtIdReunion);
             this.layoutControl1.Controls.Add(this.BtnCerrar);
             this.layoutControl1.Controls.Add(this.BtnGrabar);
             this.layoutControl1.Controls.Add(this.gridControl1);
-            this.layoutControl1.Controls.Add(this.CmbTipoReunion);
             this.layoutControl1.Controls.Add(this.TxtFechaRealizada);
             this.layoutControl1.Controls.Add(this.CmbPersona);
             this.layoutControl1.Controls.Add(this.labelControl1);
             this.layoutControl1.Controls.Add(this.txtNomReunion);
+            this.layoutControl1.Controls.Add(this.CmbTipoReunion);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -94,6 +108,14 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControl1.Size = new System.Drawing.Size(617, 450);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // TxtIdReunion
+            // 
+            this.TxtIdReunion.Location = new System.Drawing.Point(166, 35);
+            this.TxtIdReunion.Name = "TxtIdReunion";
+            this.TxtIdReunion.Size = new System.Drawing.Size(57, 20);
+            this.TxtIdReunion.StyleController = this.layoutControl1;
+            this.TxtIdReunion.TabIndex = 13;
             // 
             // BtnCerrar
             // 
@@ -118,10 +140,10 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 106);
+            this.gridControl1.Location = new System.Drawing.Point(12, 155);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(593, 292);
+            this.gridControl1.Size = new System.Drawing.Size(593, 243);
             this.gridControl1.TabIndex = 10;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -131,21 +153,10 @@ namespace INVEQUIPOS_UI.Reuniones
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // CmbTipoReunion
-            // 
-            this.CmbTipoReunion.Location = new System.Drawing.Point(166, 82);
-            this.CmbTipoReunion.Name = "CmbTipoReunion";
-            this.CmbTipoReunion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CmbTipoReunion.Properties.NullText = "--SELECCIONE--";
-            this.CmbTipoReunion.Size = new System.Drawing.Size(164, 20);
-            this.CmbTipoReunion.StyleController = this.layoutControl1;
-            this.CmbTipoReunion.TabIndex = 9;
-            // 
             // TxtFechaRealizada
             // 
             this.TxtFechaRealizada.EditValue = null;
-            this.TxtFechaRealizada.Location = new System.Drawing.Point(488, 82);
+            this.TxtFechaRealizada.Location = new System.Drawing.Point(488, 107);
             this.TxtFechaRealizada.Name = "TxtFechaRealizada";
             this.TxtFechaRealizada.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFechaRealizada.Properties.Appearance.Options.UseFont = true;
@@ -160,7 +171,7 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             // CmbPersona
             // 
-            this.CmbPersona.Location = new System.Drawing.Point(166, 58);
+            this.CmbPersona.Location = new System.Drawing.Point(166, 83);
             this.CmbPersona.Name = "CmbPersona";
             this.CmbPersona.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -182,13 +193,25 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             // txtNomReunion
             // 
-            this.txtNomReunion.Location = new System.Drawing.Point(166, 35);
+            this.txtNomReunion.Location = new System.Drawing.Point(166, 59);
             this.txtNomReunion.Name = "txtNomReunion";
             this.txtNomReunion.Properties.LinesCount = 2;
             this.txtNomReunion.Properties.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNomReunion.Size = new System.Drawing.Size(439, 19);
+            this.txtNomReunion.Size = new System.Drawing.Size(439, 20);
             this.txtNomReunion.StyleController = this.layoutControl1;
             this.txtNomReunion.TabIndex = 5;
+            // 
+            // CmbTipoReunion
+            // 
+            this.CmbTipoReunion.Location = new System.Drawing.Point(166, 107);
+            this.CmbTipoReunion.Name = "CmbTipoReunion";
+            this.CmbTipoReunion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbTipoReunion.Properties.NullText = "--SELECCIONE--";
+            this.CmbTipoReunion.Properties.PopupSizeable = false;
+            this.CmbTipoReunion.Size = new System.Drawing.Size(164, 20);
+            this.CmbTipoReunion.StyleController = this.layoutControl1;
+            this.CmbTipoReunion.TabIndex = 9;
             // 
             // Root
             // 
@@ -204,7 +227,11 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem4,
             this.layoutControlItem7,
             this.layoutControlItem8,
-            this.emptySpaceItem2});
+            this.emptySpaceItem2,
+            this.layoutControlItem9,
+            this.emptySpaceItem3,
+            this.layoutControlItem10,
+            this.emptySpaceItem4});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(617, 450);
             this.Root.TextVisible = false;
@@ -232,9 +259,9 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem2.Control = this.txtNomReunion;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 47);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(597, 23);
+            this.layoutControlItem2.Size = new System.Drawing.Size(597, 24);
             this.layoutControlItem2.Text = "Nombre de Reunión";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(151, 16);
             // 
@@ -243,7 +270,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.CmbPersona;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 46);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 71);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(597, 24);
             this.layoutControlItem3.Text = "Responsable del Equipo";
@@ -254,7 +281,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem6.Control = this.CmbTipoReunion;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 70);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 95);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(322, 24);
             this.layoutControlItem6.Text = "Tipo Reunion";
@@ -265,7 +292,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem5.Control = this.TxtFechaRealizada;
-            this.layoutControlItem5.Location = new System.Drawing.Point(322, 70);
+            this.layoutControlItem5.Location = new System.Drawing.Point(322, 95);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(275, 24);
             this.layoutControlItem5.Text = "Fecha Realizada";
@@ -274,9 +301,9 @@ namespace INVEQUIPOS_UI.Reuniones
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.gridControl1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 94);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 143);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(597, 296);
+            this.layoutControlItem4.Size = new System.Drawing.Size(597, 247);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -312,9 +339,54 @@ namespace INVEQUIPOS_UI.Reuniones
             this.emptySpaceItem2.Size = new System.Drawing.Size(224, 40);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.ContentVisible = false;
+            this.layoutControlItem9.Control = this.TxtIdReunion;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(215, 24);
+            this.layoutControlItem9.Text = "ID Reunion";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(151, 13);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(215, 23);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(382, 24);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // Error
             // 
             this.Error.ContainerControl = this;
+            // 
+            // TxtHora
+            // 
+            this.TxtHora.Location = new System.Drawing.Point(166, 131);
+            this.TxtHora.Name = "TxtHora";
+            this.TxtHora.Size = new System.Drawing.Size(140, 20);
+            this.TxtHora.StyleController = this.layoutControl1;
+            this.TxtHora.TabIndex = 14;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem10.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem10.Control = this.TxtHora;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 119);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(298, 24);
+            this.layoutControlItem10.Text = "Hora Realizada:";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(151, 16);
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.Location = new System.Drawing.Point(298, 119);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(299, 24);
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // FrmAgregarReuniones
             // 
@@ -326,15 +398,18 @@ namespace INVEQUIPOS_UI.Reuniones
             this.Name = "FrmAgregarReuniones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Reuniones Realizadas";
+            this.Load += new System.EventHandler(this.FrmAgregarReuniones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            this.layoutControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtIdReunion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbTipoReunion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaRealizada.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaRealizada.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbPersona.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomReunion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbTipoReunion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -346,7 +421,12 @@ namespace INVEQUIPOS_UI.Reuniones
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtHora.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,7 +442,6 @@ namespace INVEQUIPOS_UI.Reuniones
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.LookUpEdit CmbPersona;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraEditors.ComboBoxEdit CmbTipoReunion;
         private DevExpress.XtraEditors.DateEdit TxtFechaRealizada;
         private DevExpress.XtraEditors.MemoEdit txtNomReunion;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
@@ -376,5 +455,12 @@ namespace INVEQUIPOS_UI.Reuniones
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraEditors.TextEdit TxtIdReunion;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraEditors.LookUpEdit CmbTipoReunion;
+        private DevExpress.XtraEditors.TextEdit TxtHora;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
     }
 }

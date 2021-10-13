@@ -1,8 +1,10 @@
 ﻿using BLL;
+using DevExpress.XtraGrid.Views.Grid;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -80,6 +82,21 @@ namespace INVEQUIPOS_UI.Catalogos
         private void labelControl1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnExportar_Click(object sender, EventArgs e)
+        {
+            GridView View = (GridView)gridControl1.MainView;
+
+            if (View != null)
+            {
+                View.ExportToPdf("ListadoEquipos.pdf");
+            }
+
+            Process pdfExport = new Process();
+            pdfExport.StartInfo.FileName = "Acrobat.exe";
+            pdfExport.StartInfo.Arguments = "ListadoEquipos.pdf";
+            pdfExport.Start();
         }
     }
 }

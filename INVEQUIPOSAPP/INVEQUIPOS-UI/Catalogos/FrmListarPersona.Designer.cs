@@ -103,6 +103,7 @@ namespace INVEQUIPOS_UI.Catalogos
             this.BtnExportar.TabIndex = 6;
             this.BtnExportar.ToolTip = "Exportar";
             this.BtnExportar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.BtnExportar.Click += new System.EventHandler(this.BtnExportar_Click);
             // 
             // BtnEditar
             // 

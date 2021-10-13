@@ -1,8 +1,10 @@
 ﻿using BLL;
+using DevExpress.XtraGrid.Views.Grid;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,9 +40,8 @@ namespace INVEQUIPOS_UI.Catalogos
             gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             gridView1.OptionsView.ColumnAutoWidth = false;
             Variables.FormatoGrid(ref gridView1);
-            gridView1.Columns["Nombre"].Width = 250;
+            gridView1.Columns["Persona"].Width = 250;
         }
-
 
         #endregion
 
@@ -73,6 +74,21 @@ namespace INVEQUIPOS_UI.Catalogos
             FrmAgregarPersona frm = FrmAgregarPersona.instance();
             frm.ShowDialog();
             Cargar();
+        }
+
+        private void BtnExportar_Click(object sender, EventArgs e)
+        {
+            GridView View = (GridView)gridControl1.MainView;
+
+            if (View != null)
+            {
+                View.ExportToPdf("ListadoPersona.pdf");
+            }
+
+            Process pdfExport = new Process();
+            pdfExport.StartInfo.FileName = "Acrobat.exe";
+            pdfExport.StartInfo.Arguments = "ListadoPersona.pdf";
+            pdfExport.Start();
         }
     }
 }

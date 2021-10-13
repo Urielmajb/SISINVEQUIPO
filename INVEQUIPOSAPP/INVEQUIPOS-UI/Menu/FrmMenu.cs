@@ -21,7 +21,10 @@ namespace INVEQUIPOS_UI.Menu
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-
+            TxtFecha.Caption = DateTime.Now.ToLocalTime().ToString();
+            TxtUsuario.Caption = Variables.gstrUsername;
+            TxtServidor.Caption = Variables.gstrServername;
+            TxtBD.Caption = Variables.gstrDBName;
         }
 
         private void barButtonEquipo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

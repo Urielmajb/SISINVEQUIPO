@@ -20,6 +20,21 @@ namespace BLL
             return oReuniones.Listar();
         }
 
+        public DataTable ListarPersona()
+        {
+            return oReuniones.ListarPersona();
+        }
+
+        public DataTable ListarTipoReunion()
+        {
+            return oReuniones.ListarTipoReunion();
+        }
+
+        public ReunionEntity Obtener(int IDReunion)
+        {
+            return oReuniones.Obtener(IDReunion);
+        }
+
 
 
 

@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using DevExpress.Export;
+using DevExpress.XtraPrinting;
 using INVEQUIPOS_UI.Catalogos;
-
+using DevExpress.XtraGrid.Views;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace INVEQUIPOS_UI.Reuniones
 {
@@ -33,6 +37,16 @@ namespace INVEQUIPOS_UI.Reuniones
             return Childinstance;
         }
 
+        public void Cargar()
+        {
+            gridControl1.DataSource = oReuniones.Listar();
+            gridView1.PopulateColumns();
+            gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            gridView1.OptionsView.ColumnAutoWidth = false;
+            Variables.FormatoGrid(ref gridView1);
+            gridView1.Columns["IDReunion"].Width = 250;
+        }
+
 
 
         #endregion
@@ -46,7 +60,7 @@ namespace INVEQUIPOS_UI.Reuniones
 
         private void FrmListadoReuniones_Load(object sender, EventArgs e)
         {
-
+            Cargar();
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -59,6 +73,35 @@ namespace INVEQUIPOS_UI.Reuniones
            // Variables.gID = -1;
             FrmAgregarReuniones frm = FrmAgregarReuniones.instance();
             frm.ShowDialog();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            Variables.gID = (int)gridView1.GetFocusedRowCellValue("IDReunion");
+            FrmAgregarReuniones frm = FrmAgregarReuniones.instance();
+            frm.ShowDialog();
+            Cargar();
+        }
+
+        private void BtnExportar_Click(object sender, EventArgs e)
+        {
+
+            GridView View = (GridView)gridControl1.MainView;
+
+            if (View != null)
+            {
+                View.ExportToPdf("ListadoDocumentos.pdf");
+            }
+
+            Process pdfExport = new Process();
+            pdfExport.StartInfo.FileName = "Acrobat.exe";
+            pdfExport.StartInfo.Arguments = "ListadoDocumentos.pdf";
+            pdfExport.Start();
+
+            //gridView1.ExportToPdf("ListadoReuniones.xlsx",
+            //     new PdfExportOptions { ExportType = ExportType.WYSIWYG }
+            //     );
+            //Process.Start("Documentos.xlsx");
         }
     }
 }
