@@ -47,11 +47,7 @@ namespace INVEQUIPOS_UI.Reuniones
             gridView1.Columns["IDReunion"].Width = 250;
         }
 
-
-
         #endregion
-
-
 
         public FrmListadoReuniones()
         {
@@ -70,7 +66,7 @@ namespace INVEQUIPOS_UI.Reuniones
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-           // Variables.gID = -1;
+            Variables.gID = -1;
             FrmAgregarReuniones frm = FrmAgregarReuniones.instance();
             frm.ShowDialog();
         }

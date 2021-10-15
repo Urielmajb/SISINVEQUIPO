@@ -33,11 +33,18 @@ namespace INVEQUIPOS_UI.Reuniones
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgregarReuniones));
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.TxtHora = new DevExpress.XtraEditors.TextEdit();
             this.TxtIdReunion = new DevExpress.XtraEditors.TextEdit();
             this.BtnCerrar = new DevExpress.XtraEditors.SimpleButton();
             this.BtnGrabar = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.GridReunion = new DevExpress.XtraGrid.GridControl();
+            this.vReunion = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CmbEquipo = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CmbArticulo = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TxtCantidad = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.TxtFechaRealizada = new DevExpress.XtraEditors.DateEdit();
             this.CmbPersona = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -56,15 +63,18 @@ namespace INVEQUIPOS_UI.Reuniones
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.Error = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.TxtHora = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.Error = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtHora.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtIdReunion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridReunion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vReunion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbEquipo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbArticulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaRealizada.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaRealizada.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbPersona.Properties)).BeginInit();
@@ -83,10 +93,9 @@ namespace INVEQUIPOS_UI.Reuniones
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtHora.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -95,7 +104,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControl1.Controls.Add(this.TxtIdReunion);
             this.layoutControl1.Controls.Add(this.BtnCerrar);
             this.layoutControl1.Controls.Add(this.BtnGrabar);
-            this.layoutControl1.Controls.Add(this.gridControl1);
+            this.layoutControl1.Controls.Add(this.GridReunion);
             this.layoutControl1.Controls.Add(this.TxtFechaRealizada);
             this.layoutControl1.Controls.Add(this.CmbPersona);
             this.layoutControl1.Controls.Add(this.labelControl1);
@@ -108,6 +117,14 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControl1.Size = new System.Drawing.Size(617, 450);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // TxtHora
+            // 
+            this.TxtHora.Location = new System.Drawing.Point(166, 131);
+            this.TxtHora.Name = "TxtHora";
+            this.TxtHora.Size = new System.Drawing.Size(140, 20);
+            this.TxtHora.StyleController = this.layoutControl1;
+            this.TxtHora.TabIndex = 14;
             // 
             // TxtIdReunion
             // 
@@ -137,21 +154,100 @@ namespace INVEQUIPOS_UI.Reuniones
             this.BtnGrabar.Size = new System.Drawing.Size(78, 36);
             this.BtnGrabar.StyleController = this.layoutControl1;
             this.BtnGrabar.TabIndex = 11;
+            this.BtnGrabar.Click += new System.EventHandler(this.BtnGrabar_Click);
             // 
-            // gridControl1
+            // GridReunion
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 155);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(593, 243);
-            this.gridControl1.TabIndex = 10;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.GridReunion.Location = new System.Drawing.Point(12, 155);
+            this.GridReunion.MainView = this.vReunion;
+            this.GridReunion.Name = "GridReunion";
+            this.GridReunion.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.CmbEquipo,
+            this.CmbArticulo,
+            this.TxtCantidad});
+            this.GridReunion.Size = new System.Drawing.Size(593, 243);
+            this.GridReunion.TabIndex = 10;
+            this.GridReunion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.vReunion});
             // 
-            // gridView1
+            // vReunion
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.vReunion.ColumnPanelRowHeight = 50;
+            this.vReunion.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn1});
+            this.vReunion.GridControl = this.GridReunion;
+            this.vReunion.Name = "vReunion";
+            this.vReunion.OptionsCustomization.AllowColumnMoving = false;
+            this.vReunion.OptionsCustomization.AllowColumnResizing = false;
+            this.vReunion.OptionsCustomization.AllowFilter = false;
+            this.vReunion.OptionsCustomization.AllowGroup = false;
+            this.vReunion.OptionsCustomization.AllowSort = false;
+            this.vReunion.OptionsFilter.AllowColumnMRUFilterList = false;
+            this.vReunion.OptionsFilter.AllowFilterEditor = false;
+            this.vReunion.OptionsFilter.AllowMRUFilterList = false;
+            this.vReunion.OptionsNavigation.EnterMoveNextColumn = true;
+            this.vReunion.OptionsView.EnableAppearanceEvenRow = true;
+            this.vReunion.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.vReunion.OptionsView.ShowFooter = true;
+            this.vReunion.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Equipo";
+            this.gridColumn2.ColumnEdit = this.CmbEquipo;
+            this.gridColumn2.FieldName = "ID_Equipo";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ID_Equipo", "{0}")});
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
+            this.gridColumn2.Width = 100;
+            // 
+            // CmbEquipo
+            // 
+            this.CmbEquipo.AutoHeight = false;
+            this.CmbEquipo.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbEquipo.Name = "CmbEquipo";
+            this.CmbEquipo.NullText = "";
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Articulo";
+            this.gridColumn3.ColumnEdit = this.CmbArticulo;
+            this.gridColumn3.FieldName = "ID_Equipo";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
+            this.gridColumn3.Width = 100;
+            // 
+            // CmbArticulo
+            // 
+            this.CmbArticulo.AutoHeight = false;
+            this.CmbArticulo.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbArticulo.Name = "CmbArticulo";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Cantidad";
+            this.gridColumn1.ColumnEdit = this.TxtCantidad;
+            this.gridColumn1.FieldName = "CANTIDAD";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CANTIDAD", "SUMA={0:#.##}")});
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 2;
+            // 
+            // TxtCantidad
+            // 
+            this.TxtCantidad.AutoHeight = false;
+            this.TxtCantidad.Mask.EditMask = "n2";
+            this.TxtCantidad.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.TxtCantidad.Mask.UseMaskAsDisplayFormat = true;
+            this.TxtCantidad.Name = "TxtCantidad";
             // 
             // TxtFechaRealizada
             // 
@@ -300,7 +396,7 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.gridControl1;
+            this.layoutControlItem4.Control = this.GridReunion;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 143);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(597, 247);
@@ -341,7 +437,6 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             // layoutControlItem9
             // 
-            this.layoutControlItem9.ContentVisible = false;
             this.layoutControlItem9.Control = this.TxtIdReunion;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 23);
             this.layoutControlItem9.Name = "layoutControlItem9";
@@ -356,18 +451,6 @@ namespace INVEQUIPOS_UI.Reuniones
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(382, 24);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // Error
-            // 
-            this.Error.ContainerControl = this;
-            // 
-            // TxtHora
-            // 
-            this.TxtHora.Location = new System.Drawing.Point(166, 131);
-            this.TxtHora.Name = "TxtHora";
-            this.TxtHora.Size = new System.Drawing.Size(140, 20);
-            this.TxtHora.StyleController = this.layoutControl1;
-            this.TxtHora.TabIndex = 14;
             // 
             // layoutControlItem10
             // 
@@ -388,6 +471,10 @@ namespace INVEQUIPOS_UI.Reuniones
             this.emptySpaceItem4.Size = new System.Drawing.Size(299, 24);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // Error
+            // 
+            this.Error.ContainerControl = this;
+            // 
             // FrmAgregarReuniones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,10 +488,13 @@ namespace INVEQUIPOS_UI.Reuniones
             this.Load += new System.EventHandler(this.FrmAgregarReuniones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            this.layoutControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtHora.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtIdReunion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridReunion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vReunion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbEquipo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbArticulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaRealizada.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaRealizada.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbPersona.Properties)).EndInit();
@@ -423,10 +513,9 @@ namespace INVEQUIPOS_UI.Reuniones
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtHora.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -446,8 +535,8 @@ namespace INVEQUIPOS_UI.Reuniones
         private DevExpress.XtraEditors.MemoEdit txtNomReunion;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl GridReunion;
+        private DevExpress.XtraGrid.Views.Grid.GridView vReunion;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider Error;
         private DevExpress.XtraEditors.SimpleButton BtnCerrar;
@@ -462,5 +551,11 @@ namespace INVEQUIPOS_UI.Reuniones
         private DevExpress.XtraEditors.TextEdit TxtHora;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CmbEquipo;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit CmbArticulo;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit TxtCantidad;
     }
 }

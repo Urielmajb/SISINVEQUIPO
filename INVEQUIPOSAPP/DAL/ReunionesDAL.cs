@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Ofn;
 using Entity;
 using System.Data;
-
+using System.Data.SqlClient;
 
 namespace DAL
 {
@@ -89,35 +89,89 @@ namespace DAL
             return oReunionEntity;
         }
 
-        //public DataTable Construir_Grid_Equipo()
-        //{
-        //    var DT = new DataTable();
-        //    try
-        //    {   // carga todos los datos al combobox
-        //        DT = fn.Leer("Usp_Construir_Grid_Equipo");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new System.ArgumentException(ex.Message);
-        //    }
-        //    return DT;
-        //}
+        public DataTable Construir_Grid()
+        {
+            var DT = new DataTable();
+            try
+            {   // carga todos los datos al combobox
+                DT = fn.Leer("Usp_Construir_Grid");
+            }
+            catch (Exception ex)
+            {
+                throw new System.ArgumentException(ex.Message);
+            }
+            return DT;
+        }
 
-        //public DataTable Construir_Grid_Dispositivo()
-        //{
-        //    var DT = new DataTable();
-        //    try
-        //    {   // carga todos los datos al combobox
-        //        DT = fn.Leer("Usp_Construir_Grid_Dispositivo");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new System.ArgumentException(ex.Message);
-        //    }
-        //    return DT;
-        //}
+        public DataTable Obtener_Detalle_Reunion(int IDReunion)
+        {
+            var DT = new DataTable();
+            try
+            {   // carga todos los datos al combobox
+                DT = fn.Leer("Usp_Sel_Detalle_ReunionEquipos", 0 );
+            }
+            catch (Exception ex)
+            {
+                throw new System.ArgumentException(ex.Message);
+            }
+            return DT;
+        }
 
+        public int Grabar(ReunionEntity oReunionEntity)
+        {
+            SqlConnection Cn = fn.GetConnection();
+            SqlCommand Cmd = new SqlCommand();
+            SqlTransaction tr = null;
+            int IDReunion = 0;
+            Cn.Open();
+            tr = Cn.BeginTransaction();
+            try
+            {
+                Cmd = new SqlCommand("Usp_Ins_Reunion", Cn, tr);
+                Cmd.CommandType = CommandType.StoredProcedure;
 
+                SqlParameter parameter = new SqlParameter("@IDReunion", SqlDbType.Int, 4);
+                parameter.Direction = ParameterDirection.InputOutput;
+                parameter.Value = oReunionEntity.IDReunion;
+                Cmd.Parameters.Add(parameter);
+
+                Cmd.Parameters.AddWithValue("@IDPersona", oReunionEntity.IDPersona);
+                Cmd.Parameters.AddWithValue("@ID_Tipo", oReunionEntity.ID_Tipo);
+                Cmd.Parameters.AddWithValue("@NOM_REUNION", oReunionEntity.NOM_REUNION);
+                Cmd.Parameters.AddWithValue("@fecharealizada", oReunionEntity.fecharealizada);
+                Cmd.Parameters.AddWithValue("@hora", oReunionEntity.hora);
+                Cmd.ExecuteNonQuery();
+
+                if (IDReunion == 0)
+                {
+                    IDReunion = (int)parameter.Value;
+                }
+                oReunionEntity.IDReunion = IDReunion;
+
+                foreach (DetalleReunionEquipos DetalleReunion in oReunionEntity.Lineas)
+                {
+                    Cmd = new SqlCommand("Usp_Ins_Detalle_ReunionEquipos", Cn, tr);
+                    Cmd.CommandType = CommandType.StoredProcedure;
+                    Cmd.Parameters.AddWithValue("@IDReunion", oReunionEntity.IDReunion);
+                    Cmd.Parameters.AddWithValue("@ID_Equipo", DetalleReunion.ID_Equipo);
+                    Cmd.Parameters.AddWithValue("@CANTIDAD", DetalleReunion.CANTIDAD);
+                    Cmd.Parameters.AddWithValue("@FILA", DetalleReunion.FILA);
+                    Cmd.ExecuteNonQuery();
+                }
+                tr.Commit();
+                return IDReunion;
+            }
+            catch
+            {
+                tr.Rollback();
+                return -1;
+            }
+            finally
+            {
+                Cn.Close();
+            }
+
+        }
 
     }
 }

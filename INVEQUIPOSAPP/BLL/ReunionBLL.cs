@@ -35,13 +35,23 @@ namespace BLL
             return oReuniones.Obtener(IDReunion);
         }
 
+        public DataTable Construir_Grid()
+        {
+            return oReuniones.Construir_Grid();
+        }
 
 
+        public DataTable Obtener_Detalle_Reunion(int IDReunion)
+        {
+            return oReuniones.Obtener_Detalle_Reunion(IDReunion);
+        }
 
 
+        public int Grabar(ReunionEntity oReunionEntity)
+        {
+            return oReuniones.Grabar(oReunionEntity);
 
-
-
+        }
 
     }
 }

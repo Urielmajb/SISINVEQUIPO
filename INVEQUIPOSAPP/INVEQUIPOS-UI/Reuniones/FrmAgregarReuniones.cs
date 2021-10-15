@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DevExpress.XtraEditors;
 using Entity;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,12 @@ namespace INVEQUIPOS_UI.Reuniones
     public partial class FrmAgregarReuniones : DevExpress.XtraEditors.XtraForm
     {
         #region
+
+        //datatable a nivel global
+
+        DataTable DTG = new DataTable();
+
+
         //Instanciamos la clase de Productos BLL
 
         ReunionBLL oReuniones = new ReunionBLL();
@@ -84,6 +91,37 @@ namespace INVEQUIPOS_UI.Reuniones
             Error.ClearErrors();
         }
 
+        private void CargarCombobox_Grid()
+        {
+            DataTable dt = oReuniones.Construir_Grid();
+            CmbEquipo.DataSource = dt;
+            CmbEquipo.DisplayMember = "ID_Equipo";
+            CmbEquipo.ValueMember = "ID_Equipo";
+            CmbEquipo.PopulateColumns();
+            CmbEquipo.Columns[1].Visible = false;
+            CmbEquipo.Columns[2].Visible = false;
+
+            CmbArticulo.DataSource = dt;
+            CmbArticulo.DisplayMember = "NOM_EQUIPO";
+            CmbArticulo.ValueMember = "ID_Equipo";
+            CmbArticulo.PopulateColumns();
+            CmbArticulo.Columns[0].Visible = false;
+            CmbArticulo.Columns[2].Visible = false;
+        }
+
+
+        private void ConstruirGrid(int IDReunion)
+        {
+            DTG = oReuniones.Obtener_Detalle_Reunion(IDReunion);
+            GridReunion.DataSource = DTG;
+        }
+
+        private void Inicializar (int IDReunion)
+        {
+            CargarCombobox_Grid();
+            ConstruirGrid(IDReunion);
+        }
+
         #endregion
 
         public FrmAgregarReuniones()
@@ -100,6 +138,7 @@ namespace INVEQUIPOS_UI.Reuniones
         {
             CargarComboboxPersona();
             CargarComboboxTipoReunion();
+            Inicializar(Variables.gID);
 
             if (Variables.gID > 0)
             {
@@ -118,6 +157,45 @@ namespace INVEQUIPOS_UI.Reuniones
             }
 
 
+        }
+
+        private void BtnGrabar_Click(object sender, EventArgs e)
+        {
+            int IDReunion = 0;
+            if (!Validaciones())
+                return;
+            ReunionEntity oMaestro = new ReunionEntity();
+            oMaestro.IDReunion = int.Parse(TxtIdReunion.Text);
+            oMaestro.IDPersona = (int)CmbPersona.EditValue;
+            oMaestro.ID_Tipo = (int)CmbTipoReunion.EditValue;
+            oMaestro.fecharealizada = (DateTime)TxtFechaRealizada.EditValue;
+            oMaestro.NOM_REUNION = txtNomReunion.Text;
+
+            for (int i = 0; i < vReunion.RowCount - 1; i++)
+            {
+                DetalleReunionEquipos oDetalle = new DetalleReunionEquipos();
+                //oDetalle.NUM_INV=
+                oDetalle.ID_Equipo = (int)vReunion.GetRowCellValue(i, "ID_Equipo");
+                oDetalle.CANTIDAD = (int)vReunion.GetRowCellValue(i, "CANTIDAD");
+                oDetalle.FILA = (int)vReunion.GetRowCellValue(i, "FILA");
+                oMaestro.Lineas.Add(oDetalle);
+            }
+
+            IDReunion = oReuniones.Grabar(oMaestro);
+            if (IDReunion < 0)
+            {
+                XtraMessageBox.Show("Error al grabar Inventario, favor corregir",
+                                    ProductName, MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+            }
+
+            Nuevo();
+
+            XtraMessageBox.Show("Inventario guardado satisfactoriamente, favor corregir",
+                                   ProductName, MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
+
+            this.Close();
         }
     }
 }

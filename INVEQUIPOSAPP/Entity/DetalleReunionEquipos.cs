@@ -10,7 +10,6 @@ namespace Entity
     {
         public int ID_Equipo { get; set; }
         public int CANTIDAD { get; set; }
-        public int ID_dispo { get; set; }
         public int FILA { get; set; }
 
     }
