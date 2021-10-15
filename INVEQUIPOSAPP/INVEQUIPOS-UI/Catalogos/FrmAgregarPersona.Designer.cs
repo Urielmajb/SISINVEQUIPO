@@ -295,7 +295,6 @@ namespace INVEQUIPOS_UI.Catalogos
             // 
             this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem2.ContentVisible = false;
             this.layoutControlItem2.Control = this.TxtIdPersona;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 23);
             this.layoutControlItem2.Name = "layoutControlItem2";

@@ -25,6 +25,11 @@ namespace BLL
             return oReuniones.ListarPersona();
         }
 
+        public DataTable ListarEquipoPrestado()
+        {
+            return oReuniones.ListarEquipoPrestado();
+        }
+
         public DataTable ListarTipoReunion()
         {
             return oReuniones.ListarTipoReunion();
@@ -47,11 +52,37 @@ namespace BLL
         }
 
 
+
+        public int Nuevo(ReunionEntity oReunionEntity)
+        {
+            return oReuniones.Nuevo(oReunionEntity);
+
+        }
+
+        public int Guardar(ReunionEntity oReunionEntity)
+        {
+            if (oReunionEntity.IDReunion < 0)
+            {
+                return oReuniones.Nuevo(oReunionEntity);
+            }
+            else
+            {
+                return oReuniones.Editar(oReunionEntity);
+            }
+        }
+
+
         public int Grabar(ReunionEntity oReunionEntity)
         {
             return oReuniones.Grabar(oReunionEntity);
 
         }
+
+        public int Ultimo_Numero()
+        {
+            return oReuniones.Ultimo_Numero();
+        }
+
 
     }
 }

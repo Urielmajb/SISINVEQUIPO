@@ -69,6 +69,7 @@ namespace INVEQUIPOS_UI.Reuniones
             Variables.gID = -1;
             FrmAgregarReuniones frm = FrmAgregarReuniones.instance();
             frm.ShowDialog();
+            Cargar();
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)

@@ -57,6 +57,16 @@ namespace INVEQUIPOS_UI.Reuniones
             CmbTipoReunion.Properties.PopulateColumns();
         }
 
+
+        private void CargarComboboxEquipoPrestar()
+        { 
+            CmbEquipoPrestado.Properties.DataSource = oReuniones.ListarEquipoPrestado();
+            CmbEquipoPrestado.Properties.ValueMember = "ID_Equipo";
+            CmbEquipoPrestado.Properties.DisplayMember = "NOM_EQUIPO";
+            CmbEquipoPrestado.EditValue = 1;
+            CmbEquipoPrestado.Properties.PopulateColumns();
+        }
+
         private bool Validaciones()
         {
             //variable resultado
@@ -81,46 +91,18 @@ namespace INVEQUIPOS_UI.Reuniones
 
         private void Nuevo()
         {
-           
+
+            //TxtIdReunion.Text = oReuniones.Ultimo_Numero().ToString();
+            TxtIdReunion.Text = "-1";
             TxtFechaRealizada.EditValue = DateTime.Now.Date;
             CmbTipoReunion.EditValue = null;
             CmbPersona.EditValue = null;
             txtNomReunion.Text = string.Empty;
             TxtHora.Text = string.Empty;
-
+            CmbEquipoPrestado.EditValue = null;
             Error.ClearErrors();
         }
 
-        private void CargarCombobox_Grid()
-        {
-            DataTable dt = oReuniones.Construir_Grid();
-            CmbEquipo.DataSource = dt;
-            CmbEquipo.DisplayMember = "ID_Equipo";
-            CmbEquipo.ValueMember = "ID_Equipo";
-            CmbEquipo.PopulateColumns();
-            CmbEquipo.Columns[1].Visible = false;
-            CmbEquipo.Columns[2].Visible = false;
-
-            CmbArticulo.DataSource = dt;
-            CmbArticulo.DisplayMember = "NOM_EQUIPO";
-            CmbArticulo.ValueMember = "ID_Equipo";
-            CmbArticulo.PopulateColumns();
-            CmbArticulo.Columns[0].Visible = false;
-            CmbArticulo.Columns[2].Visible = false;
-        }
-
-
-        private void ConstruirGrid(int IDReunion)
-        {
-            DTG = oReuniones.Obtener_Detalle_Reunion(IDReunion);
-            GridReunion.DataSource = DTG;
-        }
-
-        private void Inicializar (int IDReunion)
-        {
-            CargarCombobox_Grid();
-            ConstruirGrid(IDReunion);
-        }
 
         #endregion
 
@@ -138,64 +120,101 @@ namespace INVEQUIPOS_UI.Reuniones
         {
             CargarComboboxPersona();
             CargarComboboxTipoReunion();
-            Inicializar(Variables.gID);
+            CargarComboboxEquipoPrestar();
 
             if (Variables.gID > 0)
             {
                 ReunionEntity oReunionEntity = new ReunionEntity();
                 oReunionEntity = oReuniones.Obtener(Variables.gID);
+                
                 TxtIdReunion.Text = oReunionEntity.IDReunion.ToString();
+                CmbPersona.EditValue = oReunionEntity.IDPersona;
+                CmbTipoReunion.EditValue = oReunionEntity.ID_Tipo;
                 txtNomReunion.Text = oReunionEntity.NOM_REUNION.ToString();
                 TxtFechaRealizada.EditValue = oReunionEntity.fecharealizada;
-                CmbTipoReunion.EditValue = oReunionEntity.ID_Tipo;
-                CmbPersona.EditValue = oReunionEntity.IDPersona;
                 TxtHora.Text = oReunionEntity.hora.ToString();
-               }
+                CmbEquipoPrestado.EditValue = oReunionEntity.ID_Equipo;
+            }
+
             else
             {
                 Nuevo();
             }
 
-
         }
 
         private void BtnGrabar_Click(object sender, EventArgs e)
         {
-            int IDReunion = 0;
+          
             if (!Validaciones())
                 return;
-            ReunionEntity oMaestro = new ReunionEntity();
-            oMaestro.IDReunion = int.Parse(TxtIdReunion.Text);
-            oMaestro.IDPersona = (int)CmbPersona.EditValue;
-            oMaestro.ID_Tipo = (int)CmbTipoReunion.EditValue;
-            oMaestro.fecharealizada = (DateTime)TxtFechaRealizada.EditValue;
-            oMaestro.NOM_REUNION = txtNomReunion.Text;
+            ReunionEntity oReunionEntity = new ReunionEntity();
+            oReunionEntity.IDReunion = int.Parse(TxtIdReunion.Text);
+            oReunionEntity.ID_Tipo = (int)CmbTipoReunion.EditValue;
+            oReunionEntity.IDPersona = (int)CmbPersona.EditValue;
+            oReunionEntity.fecharealizada = (DateTime)TxtFechaRealizada.EditValue;
+            oReunionEntity.NOM_REUNION = txtNomReunion.Text;
+            oReunionEntity.hora = TxtHora.Text;
+            oReunionEntity.ID_Equipo = (int)CmbEquipoPrestado.EditValue;
 
-            for (int i = 0; i < vReunion.RowCount - 1; i++)
+            if (oReuniones.Guardar(oReunionEntity) < 0)
             {
-                DetalleReunionEquipos oDetalle = new DetalleReunionEquipos();
-                //oDetalle.NUM_INV=
-                oDetalle.ID_Equipo = (int)vReunion.GetRowCellValue(i, "ID_Equipo");
-                oDetalle.CANTIDAD = (int)vReunion.GetRowCellValue(i, "CANTIDAD");
-                oDetalle.FILA = (int)vReunion.GetRowCellValue(i, "FILA");
-                oMaestro.Lineas.Add(oDetalle);
-            }
-
-            IDReunion = oReuniones.Grabar(oMaestro);
-            if (IDReunion < 0)
-            {
-                XtraMessageBox.Show("Error al grabar Inventario, favor corregir",
+                XtraMessageBox.Show("Error al grabar Personas, favor corregir",
                                     ProductName, MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
+
+                return;
             }
+
+            XtraMessageBox.Show("La persona responsable del Equipo ha sigo grabado satisfactoriamente",
+                                ProductName,
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            this.Close();
 
             Nuevo();
 
-            XtraMessageBox.Show("Inventario guardado satisfactoriamente, favor corregir",
-                                   ProductName, MessageBoxButtons.OK,
-                                   MessageBoxIcon.Information);
 
-            this.Close();
+            
+        }
+
+        //private void vReunion_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        //if (e.RowHandle < 0)
+        //        //{
+        //        //    return;
+        //        //}
+
+        //        if (e.Column.FieldName == "ID_Equipo")
+        //        {
+
+        //            if ((int)DTG.Compute("Count(ID_Equipo)", "ID_Equipo='" + e.Value + "'") >= 1)
+        //            {
+
+        //                XtraMessageBox.Show("ID Equipo se encuentra repetido",
+        //                         ProductName,
+        //                         MessageBoxButtons.OK,
+        //                         MessageBoxIcon.Information);
+        //                vReunion.DeleteRow(vReunion.FocusedRowHandle);
+        //            }
+
+        //            DataRowView DR = (DataRowView)CmbEquipo.GetDataSourceRowByKeyValue(e.Value);
+        //            //vReunion.SetRowCellValue(e.RowHandle, "CANTIDAD", 1);
+        //        }
+
+        //    }
+
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
+
+        private void txtNomReunion_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -26,6 +26,8 @@ namespace Entity
 
         public string hora { get; set; }
 
+        public int ID_Equipo { get; set; }
+
         public List<DetalleReunionEquipos> Lineas { get; set; }
 
 
