@@ -116,6 +116,18 @@
     <Compile Include="Reuniones\FrmListadoReuniones.Designer.cs">
       <DependentUpon>FrmListadoReuniones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\FrmConfServidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\FrmConfServidor.Designer.cs">
+      <DependentUpon>FrmConfServidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Variables.cs" />
     <EmbeddedResource Include="Catalogos\FrmAgregarDispositivo.resx">
       <DependentUpon>FrmAgregarDispositivo.cs</DependentUpon>
@@ -155,6 +167,12 @@
     <EmbeddedResource Include="Reuniones\FrmListadoReuniones.resx">
       <DependentUpon>FrmListadoReuniones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\FrmConfServidor.resx">
+      <DependentUpon>FrmConfServidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -170,7 +188,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reportes\" />
-    <Folder Include="Seguridad\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -331,6 +348,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel_32x326.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\technology_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x327.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servermode_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servermode_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectdatamember_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveall_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x328.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
