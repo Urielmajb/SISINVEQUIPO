@@ -1,4 +1,5 @@
 ﻿using INVEQUIPOS_UI.Menu;
+using INVEQUIPOS_UI.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace INVEQUIPOS_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new FrmLogin());
             Application.Run(new FrmMenu());
         }
     }

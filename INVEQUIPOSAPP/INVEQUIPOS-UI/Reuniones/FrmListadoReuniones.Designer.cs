@@ -99,6 +99,8 @@ namespace INVEQUIPOS_UI.Reuniones
             this.BtnExportar.Size = new System.Drawing.Size(85, 36);
             this.BtnExportar.StyleController = this.layoutControl1;
             this.BtnExportar.TabIndex = 8;
+            this.BtnExportar.ToolTip = "Exportar ";
+            this.BtnExportar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Application;
             this.BtnExportar.Click += new System.EventHandler(this.BtnExportar_Click);
             // 
             // BtnEditar
@@ -110,6 +112,8 @@ namespace INVEQUIPOS_UI.Reuniones
             this.BtnEditar.Size = new System.Drawing.Size(85, 36);
             this.BtnEditar.StyleController = this.layoutControl1;
             this.BtnEditar.TabIndex = 7;
+            this.BtnEditar.ToolTip = "Editar";
+            this.BtnEditar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Exclamation;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnNuevo
@@ -121,6 +125,8 @@ namespace INVEQUIPOS_UI.Reuniones
             this.BtnNuevo.Size = new System.Drawing.Size(86, 36);
             this.BtnNuevo.StyleController = this.layoutControl1;
             this.BtnNuevo.TabIndex = 6;
+            this.BtnNuevo.ToolTip = "Nuevo";
+            this.BtnNuevo.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Question;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // gridControl1
@@ -232,6 +238,8 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem6.MaxSize = new System.Drawing.Size(87, 40);
             this.layoutControlItem6.MinSize = new System.Drawing.Size(87, 40);
             this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.OptionsToolTip.ToolTip = "Cerrar";
+            this.layoutControlItem6.OptionsToolTip.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Error;
             this.layoutControlItem6.Size = new System.Drawing.Size(87, 40);
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);

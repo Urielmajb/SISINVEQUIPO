@@ -42,24 +42,24 @@ namespace INVEQUIPOS_UI.Reuniones
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtNomReunion = new DevExpress.XtraEditors.MemoEdit();
             this.CmbTipoReunion = new DevExpress.XtraEditors.LookUpEdit();
+            this.CmbEquipoPrestado = new DevExpress.XtraEditors.LookUpEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.Error = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.Error = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.CmbEquipoPrestado = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHora.Properties)).BeginInit();
@@ -69,22 +69,22 @@ namespace INVEQUIPOS_UI.Reuniones
             ((System.ComponentModel.ISupportInitialize)(this.CmbPersona.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomReunion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbTipoReunion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbEquipoPrestado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbEquipoPrestado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -119,7 +119,7 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             this.TxtIdReunion.Location = new System.Drawing.Point(166, 35);
             this.TxtIdReunion.Name = "TxtIdReunion";
-            this.TxtIdReunion.Size = new System.Drawing.Size(50, 20);
+            this.TxtIdReunion.Size = new System.Drawing.Size(74, 20);
             this.TxtIdReunion.StyleController = this.layoutControl1;
             this.TxtIdReunion.TabIndex = 13;
             // 
@@ -127,28 +127,32 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             this.BtnCerrar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.cancel_32x326;
             this.BtnCerrar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnCerrar.Location = new System.Drawing.Point(236, 155);
+            this.BtnCerrar.Location = new System.Drawing.Point(306, 155);
             this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(77, 36);
+            this.BtnCerrar.Size = new System.Drawing.Size(78, 45);
             this.BtnCerrar.StyleController = this.layoutControl1;
             this.BtnCerrar.TabIndex = 12;
+            this.BtnCerrar.ToolTip = "Cerrar";
+            this.BtnCerrar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Error;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // BtnGrabar
             // 
             this.BtnGrabar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.download_32x322;
             this.BtnGrabar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnGrabar.Location = new System.Drawing.Point(317, 155);
+            this.BtnGrabar.Location = new System.Drawing.Point(226, 155);
             this.BtnGrabar.Name = "BtnGrabar";
-            this.BtnGrabar.Size = new System.Drawing.Size(78, 36);
+            this.BtnGrabar.Size = new System.Drawing.Size(76, 45);
             this.BtnGrabar.StyleController = this.layoutControl1;
             this.BtnGrabar.TabIndex = 11;
+            this.BtnGrabar.ToolTip = "Guardar";
+            this.BtnGrabar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Exclamation;
             this.BtnGrabar.Click += new System.EventHandler(this.BtnGrabar_Click);
             // 
             // TxtFechaRealizada
             // 
             this.TxtFechaRealizada.EditValue = null;
-            this.TxtFechaRealizada.Location = new System.Drawing.Point(496, 59);
+            this.TxtFechaRealizada.Location = new System.Drawing.Point(464, 131);
             this.TxtFechaRealizada.Name = "TxtFechaRealizada";
             this.TxtFechaRealizada.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFechaRealizada.Properties.Appearance.Options.UseFont = true;
@@ -157,7 +161,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.TxtFechaRealizada.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.TxtFechaRealizada.Properties.NullText = "DD/MM/YYYY";
-            this.TxtFechaRealizada.Size = new System.Drawing.Size(109, 20);
+            this.TxtFechaRealizada.Size = new System.Drawing.Size(141, 20);
             this.TxtFechaRealizada.StyleController = this.layoutControl1;
             this.TxtFechaRealizada.TabIndex = 8;
             // 
@@ -189,22 +193,33 @@ namespace INVEQUIPOS_UI.Reuniones
             this.txtNomReunion.Name = "txtNomReunion";
             this.txtNomReunion.Properties.LinesCount = 1;
             this.txtNomReunion.Properties.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNomReunion.Size = new System.Drawing.Size(172, 20);
+            this.txtNomReunion.Size = new System.Drawing.Size(439, 20);
             this.txtNomReunion.StyleController = this.layoutControl1;
             this.txtNomReunion.TabIndex = 5;
             this.txtNomReunion.EditValueChanged += new System.EventHandler(this.txtNomReunion_EditValueChanged);
             // 
             // CmbTipoReunion
             // 
-            this.CmbTipoReunion.Location = new System.Drawing.Point(464, 131);
+            this.CmbTipoReunion.Location = new System.Drawing.Point(490, 107);
             this.CmbTipoReunion.Name = "CmbTipoReunion";
             this.CmbTipoReunion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CmbTipoReunion.Properties.NullText = "--SELECCIONE--";
             this.CmbTipoReunion.Properties.PopupSizeable = false;
-            this.CmbTipoReunion.Size = new System.Drawing.Size(141, 20);
+            this.CmbTipoReunion.Size = new System.Drawing.Size(115, 20);
             this.CmbTipoReunion.StyleController = this.layoutControl1;
             this.CmbTipoReunion.TabIndex = 9;
+            // 
+            // CmbEquipoPrestado
+            // 
+            this.CmbEquipoPrestado.Location = new System.Drawing.Point(166, 107);
+            this.CmbEquipoPrestado.Name = "CmbEquipoPrestado";
+            this.CmbEquipoPrestado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbEquipoPrestado.Properties.NullText = "--SELECCIONE--";
+            this.CmbEquipoPrestado.Size = new System.Drawing.Size(166, 20);
+            this.CmbEquipoPrestado.StyleController = this.layoutControl1;
+            this.CmbEquipoPrestado.TabIndex = 15;
             // 
             // Root
             // 
@@ -216,12 +231,12 @@ namespace INVEQUIPOS_UI.Reuniones
             this.emptySpaceItem3,
             this.layoutControlItem3,
             this.layoutControlItem7,
-            this.layoutControlItem8,
             this.emptySpaceItem2,
             this.layoutControlItem2,
             this.emptySpaceItem1,
             this.layoutControlItem10,
             this.layoutControlItem11,
+            this.layoutControlItem8,
             this.layoutControlItem5,
             this.layoutControlItem6});
             this.Root.Name = "Root";
@@ -238,16 +253,23 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // layoutControlItem2
+            // layoutControlItem9
             // 
-            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem2.Control = this.txtNomReunion;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 47);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(330, 24);
-            this.layoutControlItem2.Text = "Nombre de Reunión";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(151, 16);
+            this.layoutControlItem9.ContentVisible = false;
+            this.layoutControlItem9.Control = this.TxtIdReunion;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(232, 24);
+            this.layoutControlItem9.Text = "Num Reunion";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(151, 13);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(232, 23);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(365, 24);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
@@ -260,36 +282,14 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem3.Text = "Responsable del Equipo";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(151, 16);
             // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem6.Control = this.CmbTipoReunion;
-            this.layoutControlItem6.Location = new System.Drawing.Point(298, 119);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(299, 24);
-            this.layoutControlItem6.Text = "Tipo Reunion";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(151, 16);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem5.Control = this.TxtFechaRealizada;
-            this.layoutControlItem5.Location = new System.Drawing.Point(330, 47);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(267, 24);
-            this.layoutControlItem5.Text = "Fecha Realizada";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(151, 16);
-            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.BtnGrabar;
-            this.layoutControlItem7.Location = new System.Drawing.Point(305, 143);
-            this.layoutControlItem7.MaxSize = new System.Drawing.Size(82, 40);
-            this.layoutControlItem7.MinSize = new System.Drawing.Size(82, 40);
+            this.layoutControlItem7.Location = new System.Drawing.Point(214, 143);
+            this.layoutControlItem7.MaxSize = new System.Drawing.Size(80, 49);
+            this.layoutControlItem7.MinSize = new System.Drawing.Size(80, 49);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(82, 49);
+            this.layoutControlItem7.Size = new System.Drawing.Size(80, 49);
             this.layoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
@@ -297,11 +297,11 @@ namespace INVEQUIPOS_UI.Reuniones
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.BtnCerrar;
-            this.layoutControlItem8.Location = new System.Drawing.Point(224, 143);
-            this.layoutControlItem8.MaxSize = new System.Drawing.Size(81, 40);
-            this.layoutControlItem8.MinSize = new System.Drawing.Size(81, 40);
+            this.layoutControlItem8.Location = new System.Drawing.Point(294, 143);
+            this.layoutControlItem8.MaxSize = new System.Drawing.Size(82, 49);
+            this.layoutControlItem8.MinSize = new System.Drawing.Size(82, 49);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(81, 49);
+            this.layoutControlItem8.Size = new System.Drawing.Size(82, 49);
             this.layoutControlItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
@@ -311,25 +311,27 @@ namespace INVEQUIPOS_UI.Reuniones
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 143);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(224, 49);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(214, 49);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlItem9
+            // layoutControlItem2
             // 
-            this.layoutControlItem9.Control = this.TxtIdReunion;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 23);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(208, 24);
-            this.layoutControlItem9.Text = "Num Reunion";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(151, 13);
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem2.Control = this.txtNomReunion;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 47);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(597, 24);
+            this.layoutControlItem2.Text = "Nombre de Reunión";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(151, 16);
             // 
-            // emptySpaceItem3
+            // emptySpaceItem1
             // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(208, 23);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(389, 24);
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(376, 143);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(221, 49);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem10
             // 
@@ -342,10 +344,6 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem10.Text = "Hora Realizada:";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(151, 16);
             // 
-            // Error
-            // 
-            this.Error.ContainerControl = this;
-            // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -353,9 +351,35 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem11.Control = this.CmbEquipoPrestado;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 95);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(597, 24);
+            this.layoutControlItem11.Size = new System.Drawing.Size(324, 24);
             this.layoutControlItem11.Text = "Equipo Prestado:";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(151, 16);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem5.Control = this.TxtFechaRealizada;
+            this.layoutControlItem5.Location = new System.Drawing.Point(298, 119);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(299, 24);
+            this.layoutControlItem5.Text = "Fecha Realizada";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(151, 16);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem6.Control = this.CmbTipoReunion;
+            this.layoutControlItem6.Location = new System.Drawing.Point(324, 95);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(273, 24);
+            this.layoutControlItem6.Text = "Tipo Reunion";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(151, 16);
+            // 
+            // Error
+            // 
+            this.Error.ContainerControl = this;
             // 
             // gridColumn2
             // 
@@ -377,25 +401,6 @@ namespace INVEQUIPOS_UI.Reuniones
             this.gridColumn3.VisibleIndex = 1;
             this.gridColumn3.Width = 100;
             // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(387, 143);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(210, 49);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // CmbEquipoPrestado
-            // 
-            this.CmbEquipoPrestado.Location = new System.Drawing.Point(166, 107);
-            this.CmbEquipoPrestado.Name = "CmbEquipoPrestado";
-            this.CmbEquipoPrestado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CmbEquipoPrestado.Properties.NullText = "--SELECCIONE--";
-            this.CmbEquipoPrestado.Size = new System.Drawing.Size(439, 20);
-            this.CmbEquipoPrestado.StyleController = this.layoutControl1;
-            this.CmbEquipoPrestado.TabIndex = 15;
-            // 
             // FrmAgregarReuniones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,22 +421,22 @@ namespace INVEQUIPOS_UI.Reuniones
             ((System.ComponentModel.ISupportInitialize)(this.CmbPersona.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomReunion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbTipoReunion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbEquipoPrestado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbEquipoPrestado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -105,3 +105,5 @@ C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INV
 C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Catalogos.FrmListadoDispositivos.resources
 C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Reuniones.FrmAgregarReuniones.resources
 C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Reuniones.FrmListadoReuniones.resources
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Seguridad.FrmConfServidor.resources
+C:\Users\Posgrado\Desktop\SISINVEQUIPO\INVEQUIPOSAPP\INVEQUIPOS-UI\obj\Debug\INVEQUIPOS_UI.Seguridad.FrmLogin.resources
