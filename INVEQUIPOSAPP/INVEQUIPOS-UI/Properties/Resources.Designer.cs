@@ -543,6 +543,26 @@ namespace INVEQUIPOS_UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap meeting_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("meeting_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap meeting_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("meeting_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap newcomment_32x32 {
             get {
                 object obj = ResourceManager.GetObject("newcomment_32x32", resourceCulture);
@@ -576,6 +596,16 @@ namespace INVEQUIPOS_UI.Properties {
         internal static System.Drawing.Bitmap newcomment_32x323 {
             get {
                 object obj = ResourceManager.GetObject("newcomment_32x323", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap newcomment_32x324 {
+            get {
+                object obj = ResourceManager.GetObject("newcomment_32x324", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -753,6 +783,16 @@ namespace INVEQUIPOS_UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap show_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("show_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap showhidecomment_32x32 {
             get {
                 object obj = ResourceManager.GetObject("showhidecomment_32x32", resourceCulture);
@@ -806,6 +846,16 @@ namespace INVEQUIPOS_UI.Properties {
         internal static System.Drawing.Bitmap sortbyorderdate_32x32 {
             get {
                 object obj = ResourceManager.GetObject("sortbyorderdate_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap support_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("support_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

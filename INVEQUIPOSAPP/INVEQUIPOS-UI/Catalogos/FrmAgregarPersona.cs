@@ -81,7 +81,6 @@ namespace INVEQUIPOS_UI.Catalogos
             TxtIdPersona.Text = "-1";
             TxtNombre.Text = "";
             TxtApellido.Text = "";
-            BtnTiempoEntrega.Enabled = false;
             TxtEstado.Text = "A";
             TxtCargo.Text = "";
             TxtArea.Text = "";
@@ -163,6 +162,22 @@ namespace INVEQUIPOS_UI.Catalogos
 
 
 
+        }
+
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+            Nuevo();
+        }
+
+        private void FrmAgregarPersona_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Activa el evento enter en el formulario en combiacion con keypreview = true
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                System.Windows.Forms.SendKeys.Send("{TAB}");
+                e.Handled = true;
+
+            }
         }
     }
 }

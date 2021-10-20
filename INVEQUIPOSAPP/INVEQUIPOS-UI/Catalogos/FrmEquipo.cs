@@ -81,7 +81,6 @@ namespace INVEQUIPOS_UI.Catalogos
             TxtIdEquipo.Text = "-1";
             TxtNombre.Text = "";
             TxtCodigoActivo.Text = "";
-            BtnBaja.Enabled = false;
             TxtActivo.Text = "A";
             TxtCantidad.Text = "";
         }
@@ -112,7 +111,7 @@ namespace INVEQUIPOS_UI.Catalogos
                 TxtCodigoActivo.Text = oEquipoEntity.CODIGO_ACTIVO.ToString();
                 TxtActivo.Text = oEquipoEntity.ACTIVO.ToString();
                 TxtCantidad.Text = oEquipoEntity.CANTIDAD.ToString();
-                BtnBaja.Enabled = true;
+
 
             }
             else
@@ -158,6 +157,22 @@ namespace INVEQUIPOS_UI.Catalogos
 
 
 
+        }
+
+        private void FrmEquipo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Activa el evento enter en el formulario en combiacion con keypreview = true
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                System.Windows.Forms.SendKeys.Send("{TAB}");
+                e.Handled = true;
+
+            }
+        }
+
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+            Nuevo();
         }
     }
 }

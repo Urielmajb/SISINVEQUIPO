@@ -92,7 +92,6 @@ namespace INVEQUIPOS_UI.Reuniones
         private void Nuevo()
         {
 
-            //TxtIdReunion.Text = oReuniones.Ultimo_Numero().ToString();
             TxtIdReunion.Text = "-1";
             TxtFechaRealizada.EditValue = DateTime.Now.Date;
             CmbTipoReunion.EditValue = null;
@@ -178,43 +177,27 @@ namespace INVEQUIPOS_UI.Reuniones
             
         }
 
-        //private void vReunion_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
-        //{
-        //    try
-        //    {
-        //        //if (e.RowHandle < 0)
-        //        //{
-        //        //    return;
-        //        //}
 
-        //        if (e.Column.FieldName == "ID_Equipo")
-        //        {
-
-        //            if ((int)DTG.Compute("Count(ID_Equipo)", "ID_Equipo='" + e.Value + "'") >= 1)
-        //            {
-
-        //                XtraMessageBox.Show("ID Equipo se encuentra repetido",
-        //                         ProductName,
-        //                         MessageBoxButtons.OK,
-        //                         MessageBoxIcon.Information);
-        //                vReunion.DeleteRow(vReunion.FocusedRowHandle);
-        //            }
-
-        //            DataRowView DR = (DataRowView)CmbEquipo.GetDataSourceRowByKeyValue(e.Value);
-        //            //vReunion.SetRowCellValue(e.RowHandle, "CANTIDAD", 1);
-        //        }
-
-        //    }
-
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
 
         private void txtNomReunion_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmAgregarReuniones_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Activa el evento enter en el formulario en combiacion con keypreview = true
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                System.Windows.Forms.SendKeys.Send("{TAB}");
+                e.Handled = true;
+
+            }
+        }
+
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+            Nuevo();
         }
     }
 }

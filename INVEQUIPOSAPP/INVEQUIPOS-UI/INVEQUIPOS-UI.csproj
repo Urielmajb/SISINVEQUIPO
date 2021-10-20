@@ -85,6 +85,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBEquipoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBEquipoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEquipoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBEquipoDataSetConsultaReu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEquipoDataSetConsultaReu.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DsAuditoria.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -205,6 +215,28 @@
     </None>
     <None Include="DBEquipoDataSet.xss">
       <DependentUpon>DBEquipoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBEquipoDataSet1.xsc">
+      <DependentUpon>DBEquipoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBEquipoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBEquipoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBEquipoDataSet1.xss">
+      <DependentUpon>DBEquipoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBEquipoDataSetConsultaReu.xsc">
+      <DependentUpon>DBEquipoDataSetConsultaReu.xsd</DependentUpon>
+    </None>
+    <None Include="DBEquipoDataSetConsultaReu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBEquipoDataSetConsultaReu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBEquipoDataSetConsultaReu.xss">
+      <DependentUpon>DBEquipoDataSetConsultaReu.xsd</DependentUpon>
     </None>
     <None Include="DsAuditoria.xsc">
       <DependentUpon>DsAuditoria.xsd</DependentUpon>
@@ -502,6 +534,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\selectdatamember_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newcomment_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\support_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

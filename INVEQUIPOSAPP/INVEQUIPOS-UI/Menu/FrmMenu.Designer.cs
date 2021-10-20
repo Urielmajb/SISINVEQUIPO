@@ -42,12 +42,11 @@ namespace INVEQUIPOS_UI.Menu
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonConsulta = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonConsultaReuniones = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -70,14 +69,14 @@ namespace INVEQUIPOS_UI.Menu
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
-            this.barButtonConsulta});
+            this.barButtonConsulta,
+            this.barButtonConsultaReuniones});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 13;
+            this.ribbonControl1.MaxItemId = 14;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage3,
-            this.ribbonPage4,
             this.ribbonPage5});
             this.ribbonControl1.Size = new System.Drawing.Size(807, 161);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
@@ -168,6 +167,15 @@ namespace INVEQUIPOS_UI.Menu
             this.barButtonConsulta.Name = "barButtonConsulta";
             this.barButtonConsulta.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonConsulta_ItemClick);
             // 
+            // barButtonConsultaReuniones
+            // 
+            this.barButtonConsultaReuniones.Caption = "Consulta Reuniones Realizadas";
+            this.barButtonConsultaReuniones.Id = 13;
+            this.barButtonConsultaReuniones.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.meeting_16x16;
+            this.barButtonConsultaReuniones.ImageOptions.LargeImage = global::INVEQUIPOS_UI.Properties.Resources.meeting_32x32;
+            this.barButtonConsultaReuniones.Name = "barButtonConsultaReuniones";
+            this.barButtonConsultaReuniones.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonConsultaReuniones_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -197,22 +205,9 @@ namespace INVEQUIPOS_UI.Menu
             // 
             this.ribbonPageGroup2.AllowTextClipping = false;
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonConsultaReuniones);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Eventos Realizados";
-            // 
-            // ribbonPage4
-            // 
-            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.ribbonPage4.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.contentarrangeinrows_16x16;
-            this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Text = "Consultas";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonConsulta);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Consulta de Eventos Realizados";
             // 
             // ribbonPage5
             // 
@@ -263,6 +258,7 @@ namespace INVEQUIPOS_UI.Menu
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMenu_FormClosing);
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
@@ -282,8 +278,6 @@ namespace INVEQUIPOS_UI.Menu
         private DevExpress.XtraBars.BarButtonItem barButtonPersonas;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarStaticItem TxtServidor;
@@ -294,5 +288,6 @@ namespace INVEQUIPOS_UI.Menu
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonConsulta;
+        private DevExpress.XtraBars.BarButtonItem barButtonConsultaReuniones;
     }
 }
