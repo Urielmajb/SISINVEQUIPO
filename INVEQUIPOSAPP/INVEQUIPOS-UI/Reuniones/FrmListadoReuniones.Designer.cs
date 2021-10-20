@@ -267,6 +267,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.layoutControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FrmListadoReuniones.IconOptions.Image")));
             this.Name = "FrmListadoReuniones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -16,9 +17,18 @@ namespace Ofn
             try
             {
 
-                string strConnect = "Data Source=PRESENTACIONES1\\SQLEXPRESS;Initial Catalog=DBEquipo;User ID=net;Password=2021";
+                RegistryKey key;
+                key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Invequipo");
+                string gstrServername = (String)key.GetValue("Servidor");
+                string gstrDbName = (String)key.GetValue("BD");
+                string gstrSesion = (String)key.GetValue("Usuario");
+                string gstrclave = (String)key.GetValue("clave");
 
-                //return new SqlConnection(ConfigurationManager.ConnectionStrings["SigEvaluacion"].ToString());
+                string strConnect = ("Data Source=" + (gstrServername + (";Initial Catalog="
+                         + (gstrDbName + ";User ID=" + gstrSesion + ";Password=" + gstrclave))));
+
+                //string strConnect = "Data Source=PRESENTACIONES1\\SQLEXPRESS;Initial Catalog=DBEquipo;User ID=net2;Password=2021";
+
 
                 return new SqlConnection(strConnect);
             }

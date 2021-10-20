@@ -34,12 +34,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,12 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Catalogos\FrmAgregarDispositivo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Catalogos\FrmAgregarDispositivo.Designer.cs">
-      <DependentUpon>FrmAgregarDispositivo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Catalogos\FrmAgregarPersona.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,12 +68,6 @@
     <Compile Include="Catalogos\FrmEquipo.Designer.cs">
       <DependentUpon>FrmEquipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Catalogos\FrmListadoDispositivos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Catalogos\FrmListadoDispositivos.Designer.cs">
-      <DependentUpon>FrmListadoDispositivos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Catalogos\FrmListarEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +79,26 @@
     </Compile>
     <Compile Include="Catalogos\FrmListarPersona.Designer.cs">
       <DependentUpon>FrmListarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBEquipoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEquipoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsAuditoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsAuditoria.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsConsultaMeetings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsConsultaMeetings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsConsultaReunion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsConsultaReunion.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -110,11 +120,23 @@
     <Compile Include="Reuniones\FrmAgregarReuniones.Designer.cs">
       <DependentUpon>FrmAgregarReuniones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reuniones\FrmConsultaReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reuniones\FrmConsultaReunion.Designer.cs">
+      <DependentUpon>FrmConsultaReunion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reuniones\FrmListadoReuniones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reuniones\FrmListadoReuniones.Designer.cs">
       <DependentUpon>FrmListadoReuniones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\FrmAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\FrmAuditoria.Designer.cs">
+      <DependentUpon>FrmAuditoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\FrmConfServidor.cs">
       <SubType>Form</SubType>
@@ -129,17 +151,11 @@
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables.cs" />
-    <EmbeddedResource Include="Catalogos\FrmAgregarDispositivo.resx">
-      <DependentUpon>FrmAgregarDispositivo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FrmAgregarPersona.resx">
       <DependentUpon>FrmAgregarPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FrmEquipo.resx">
       <DependentUpon>FrmEquipo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Catalogos\FrmListadoDispositivos.resx">
-      <DependentUpon>FrmListadoDispositivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FrmListarEquipo.resx">
       <DependentUpon>FrmListarEquipo.cs</DependentUpon>
@@ -164,8 +180,14 @@
     <EmbeddedResource Include="Reuniones\FrmAgregarReuniones.resx">
       <DependentUpon>FrmAgregarReuniones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reuniones\FrmConsultaReunion.resx">
+      <DependentUpon>FrmConsultaReunion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reuniones\FrmListadoReuniones.resx">
       <DependentUpon>FrmListadoReuniones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\FrmAuditoria.resx">
+      <DependentUpon>FrmAuditoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\FrmConfServidor.resx">
       <DependentUpon>FrmConfServidor.cs</DependentUpon>
@@ -173,6 +195,50 @@
     <EmbeddedResource Include="Seguridad\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DBEquipoDataSet.xsc">
+      <DependentUpon>DBEquipoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBEquipoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBEquipoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBEquipoDataSet.xss">
+      <DependentUpon>DBEquipoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DsAuditoria.xsc">
+      <DependentUpon>DsAuditoria.xsd</DependentUpon>
+    </None>
+    <None Include="DsAuditoria.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsAuditoria.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DsAuditoria.xss">
+      <DependentUpon>DsAuditoria.xsd</DependentUpon>
+    </None>
+    <None Include="DsConsultaMeetings.xsc">
+      <DependentUpon>DsConsultaMeetings.xsd</DependentUpon>
+    </None>
+    <None Include="DsConsultaMeetings.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsConsultaMeetings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DsConsultaMeetings.xss">
+      <DependentUpon>DsConsultaMeetings.xsd</DependentUpon>
+    </None>
+    <None Include="DsConsultaReunion.xsc">
+      <DependentUpon>DsConsultaReunion.xsd</DependentUpon>
+    </None>
+    <None Include="DsConsultaReunion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsConsultaReunion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DsConsultaReunion.xss">
+      <DependentUpon>DsConsultaReunion.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -197,6 +263,10 @@
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{d416ffad-043c-4b13-9c1b-b08bebefacba}</Project>
       <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ofn\Ofn.csproj">
+      <Project>{7EA7B296-D765-4487-9927-A03F7212CA8A}</Project>
+      <Name>Ofn</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -384,6 +454,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel_32x328.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servermode.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paymentpaid.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showweightedlegend.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security_visibility.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contentarrangeinrows_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showproduct_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showproduct_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sortbyorderdate_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sortbyorderdate_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showhidecomment_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servermode_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectdatamember_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

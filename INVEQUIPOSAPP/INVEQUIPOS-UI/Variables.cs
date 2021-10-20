@@ -112,7 +112,7 @@ namespace INVEQUIPOS_UI
         {
             for (int i = 0; i <= Grid.Columns.Count - 1; i++)
             {
-                Grid.Columns[i].Width = 100;
+                Grid.Columns[i].Width = 200;
                 Grid.Columns[i].OptionsColumn.AllowEdit = false;
                 Grid.Columns[i].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
                 Grid.Columns[i].AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;

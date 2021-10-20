@@ -1,7 +1,11 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using INVEQUIPOS_UI.Menu;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +21,9 @@ namespace INVEQUIPOS_UI.Seguridad
             InitializeComponent();
         }
 
+        SqlConnection con = new SqlConnection(@"Data Source = PRESENTACIONES1\\SQLEXPRESS; Initial Catalog = DBEquipo; User ID = net2; Password=2021");
+
+
         private void labelControl1_Click(object sender, EventArgs e)
         {
 
@@ -25,6 +32,84 @@ namespace INVEQUIPOS_UI.Seguridad
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void loger(string usuario, string contrasenia)
+        {
+            
+
+
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            //--Cargar el nombre del servidor y Base de Datos
+
+            TxtServer.ReadOnly = true;
+            TxtServer.BackColor = Color.Yellow;
+            TxtServer.ForeColor = Color.Blue;
+
+            TxtBD.ReadOnly = true;
+            TxtBD.BackColor = Color.Yellow;
+            TxtBD.ForeColor = Color.Blue;
+
+            try
+            {
+                RegistryKey key;
+                key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Invequipo");
+                Variables.gstrServername = (String)key.GetValue("Servidor");
+                Variables.gstrDBName = (String)key.GetValue("BD");
+
+                this.TxtServer.Text = Variables.gstrServername;
+                this.TxtBD.Text = Variables.gstrDBName;
+
+            }
+            catch
+            {
+
+
+            }
+
+        }
+
+        private void BtnAceptar_Click(object sender, EventArgs e)
+        {
+            //if (TxtUsuario.Text == "net" && TxtPwd.Text == "2021")
+            //{ 
+            //    FrmMenu frm = new FrmMenu();
+            //    this.Visible = false;
+            //   frm.Show();
+            //}
+
+            //else
+            //{
+            //    XtraMessageBox.Show("Contrasenia Incorrecta", Application.ProductName,
+            //                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
+            if (TxtPwd.Text == "2021")
+            {
+                Variables.gstrUsername = TxtUsuario.Text;
+
+                FrmMenu frm = new FrmMenu();
+                this.Visible = false;
+                frm.Show();
+            }
+            else
+            {
+                XtraMessageBox.Show("Contrasenia Incorrecta", Application.ProductName,
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtPwd_Validated(object sender, EventArgs e)
+        {
+            if (TxtUsuario.Text.Length == 0)
+
+                Error.SetError(TxtPwd, "Usuario es requerido");
+
+            else
+                Error.SetError(TxtPwd, "");
         }
     }
 }
