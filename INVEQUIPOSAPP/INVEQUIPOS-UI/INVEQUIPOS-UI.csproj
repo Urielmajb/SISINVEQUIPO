@@ -144,6 +144,12 @@
     <Compile Include="Reportes\RptEventos.Designer.cs">
       <DependentUpon>RptEventos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\RptEventosRealizados.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\RptEventosRealizados.Designer.cs">
+      <DependentUpon>RptEventosRealizados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reuniones\FrmAgregarReuniones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </Compile>
     <EmbeddedResource Include="Reportes\RptEventos.resx">
       <DependentUpon>RptEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptEventosRealizados.resx">
+      <DependentUpon>RptEventosRealizados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reuniones\FrmAgregarReuniones.resx">
       <DependentUpon>FrmAgregarReuniones.cs</DependentUpon>

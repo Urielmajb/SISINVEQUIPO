@@ -57,10 +57,10 @@ namespace INVEQUIPOS_UI.Seguridad
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.dsAuditoria = new INVEQUIPOS_UI.DsAuditoria();
             this.uspAuditoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usp_AuditoriaTableAdapter = new INVEQUIPOS_UI.DsAuditoriaTableAdapters.Usp_AuditoriaTableAdapter();
-            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.BtnMostrar = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -81,9 +81,9 @@ namespace INVEQUIPOS_UI.Seguridad
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAuditoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uspAuditoriaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -346,6 +346,14 @@ namespace INVEQUIPOS_UI.Seguridad
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
+            // emptySpaceItem7
+            // 
+            this.emptySpaceItem7.AllowHotTrack = false;
+            this.emptySpaceItem7.Location = new System.Drawing.Point(1297, 67);
+            this.emptySpaceItem7.Name = "emptySpaceItem7";
+            this.emptySpaceItem7.Size = new System.Drawing.Size(67, 40);
+            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // dsAuditoria
             // 
             this.dsAuditoria.DataSetName = "DsAuditoria";
@@ -359,14 +367,6 @@ namespace INVEQUIPOS_UI.Seguridad
             // usp_AuditoriaTableAdapter
             // 
             this.usp_AuditoriaTableAdapter.ClearBeforeFill = true;
-            // 
-            // emptySpaceItem7
-            // 
-            this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(1297, 67);
-            this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(67, 40);
-            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // BtnMostrar
             // 
@@ -418,9 +418,9 @@ namespace INVEQUIPOS_UI.Seguridad
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAuditoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uspAuditoriaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 

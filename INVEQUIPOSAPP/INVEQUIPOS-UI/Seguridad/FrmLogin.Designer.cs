@@ -33,6 +33,8 @@ namespace INVEQUIPOS_UI.Seguridad
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.TxtBD = new DevExpress.XtraEditors.TextEdit();
+            this.TxtServer = new DevExpress.XtraEditors.TextEdit();
             this.BtnCerrar = new DevExpress.XtraEditors.SimpleButton();
             this.BtnAceptar = new DevExpress.XtraEditors.SimpleButton();
             this.TxtPwd = new DevExpress.XtraEditors.TextEdit();
@@ -51,18 +53,18 @@ namespace INVEQUIPOS_UI.Seguridad
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.TxtServer = new DevExpress.XtraEditors.TextEdit();
-            this.TxtBD = new DevExpress.XtraEditors.TextEdit();
             this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.Error = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.Error = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtBD.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtServer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPwd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -78,16 +80,14 @@ namespace INVEQUIPOS_UI.Seguridad
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtServer.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtBD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -107,6 +107,22 @@ namespace INVEQUIPOS_UI.Seguridad
             this.layoutControl1.Size = new System.Drawing.Size(486, 247);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // TxtBD
+            // 
+            this.TxtBD.Location = new System.Drawing.Point(242, 137);
+            this.TxtBD.Name = "TxtBD";
+            this.TxtBD.Size = new System.Drawing.Size(232, 20);
+            this.TxtBD.StyleController = this.layoutControl1;
+            this.TxtBD.TabIndex = 14;
+            // 
+            // TxtServer
+            // 
+            this.TxtServer.Location = new System.Drawing.Point(242, 113);
+            this.TxtServer.Name = "TxtServer";
+            this.TxtServer.Size = new System.Drawing.Size(232, 20);
+            this.TxtServer.StyleController = this.layoutControl1;
+            this.TxtServer.TabIndex = 13;
             // 
             // BtnCerrar
             // 
@@ -288,22 +304,6 @@ namespace INVEQUIPOS_UI.Seguridad
             this.emptySpaceItem10.Size = new System.Drawing.Size(57, 40);
             this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // TxtServer
-            // 
-            this.TxtServer.Location = new System.Drawing.Point(242, 113);
-            this.TxtServer.Name = "TxtServer";
-            this.TxtServer.Size = new System.Drawing.Size(232, 20);
-            this.TxtServer.StyleController = this.layoutControl1;
-            this.TxtServer.TabIndex = 13;
-            // 
-            // TxtBD
-            // 
-            this.TxtBD.Location = new System.Drawing.Point(242, 137);
-            this.TxtBD.Name = "TxtBD";
-            this.TxtBD.Size = new System.Drawing.Size(232, 20);
-            this.TxtBD.StyleController = this.layoutControl1;
-            this.TxtBD.TabIndex = 14;
-            // 
             // emptySpaceItem11
             // 
             this.emptySpaceItem11.AllowHotTrack = false;
@@ -311,6 +311,10 @@ namespace INVEQUIPOS_UI.Seguridad
             this.emptySpaceItem11.Name = "emptySpaceItem11";
             this.emptySpaceItem11.Size = new System.Drawing.Size(322, 11);
             this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // Error
+            // 
+            this.Error.ContainerControl = this;
             // 
             // pictureEdit1
             // 
@@ -371,10 +375,6 @@ namespace INVEQUIPOS_UI.Seguridad
             this.layoutControlItem6.Text = "BDO:";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(83, 16);
             // 
-            // Error
-            // 
-            this.Error.ContainerControl = this;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,6 +390,8 @@ namespace INVEQUIPOS_UI.Seguridad
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             this.layoutControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtBD.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtServer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPwd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -405,16 +407,14 @@ namespace INVEQUIPOS_UI.Seguridad
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtServer.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtBD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
             this.ResumeLayout(false);
 
         }

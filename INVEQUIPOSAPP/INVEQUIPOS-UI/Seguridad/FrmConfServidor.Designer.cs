@@ -32,27 +32,27 @@ namespace INVEQUIPOS_UI.Seguridad
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfServidor));
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.BtnCerrar = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnGuardar = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnConexion = new DevExpress.XtraEditors.SimpleButton();
             this.TxtPwd = new DevExpress.XtraEditors.TextEdit();
             this.TxtUser = new DevExpress.XtraEditors.TextEdit();
             this.TxtBD = new DevExpress.XtraEditors.TextEdit();
             this.TxtServer = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.BtnCerrar = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnGuardar = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnConexion = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -63,19 +63,19 @@ namespace INVEQUIPOS_UI.Seguridad
             ((System.ComponentModel.ISupportInitialize)(this.TxtUser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtBD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtServer.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
@@ -100,39 +100,6 @@ namespace INVEQUIPOS_UI.Seguridad
             this.layoutControl1.Size = new System.Drawing.Size(583, 334);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.cancel_32x328;
-            this.BtnCerrar.Location = new System.Drawing.Point(354, 263);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(118, 36);
-            this.BtnCerrar.StyleController = this.layoutControl1;
-            this.BtnCerrar.TabIndex = 13;
-            this.BtnCerrar.Text = "Cerrar";
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // BtnGuardar
-            // 
-            this.BtnGuardar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.saveall_32x32;
-            this.BtnGuardar.Location = new System.Drawing.Point(235, 263);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(115, 36);
-            this.BtnGuardar.StyleController = this.layoutControl1;
-            this.BtnGuardar.TabIndex = 12;
-            this.BtnGuardar.Text = "Guardar";
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
-            // BtnConexion
-            // 
-            this.BtnConexion.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.selectdatamember_32x32;
-            this.BtnConexion.Location = new System.Drawing.Point(105, 263);
-            this.BtnConexion.Name = "BtnConexion";
-            this.BtnConexion.Size = new System.Drawing.Size(126, 36);
-            this.BtnConexion.StyleController = this.layoutControl1;
-            this.BtnConexion.TabIndex = 11;
-            this.BtnConexion.Text = "Probar Conexion";
-            this.BtnConexion.Click += new System.EventHandler(this.BtnConexion_Click);
             // 
             // TxtPwd
             // 
@@ -177,17 +144,6 @@ namespace INVEQUIPOS_UI.Seguridad
             this.labelControl2.TabIndex = 6;
             this.labelControl2.Text = resources.GetString("labelControl2.Text");
             // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(12, 12);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.pictureEdit1.Size = new System.Drawing.Size(138, 104);
-            this.pictureEdit1.StyleController = this.layoutControl1;
-            this.pictureEdit1.TabIndex = 5;
-            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -206,15 +162,6 @@ namespace INVEQUIPOS_UI.Seguridad
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(583, 334);
             this.Root.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.pictureEdit1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(142, 108);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
             // 
             // emptySpaceItem3
             // 
@@ -240,33 +187,6 @@ namespace INVEQUIPOS_UI.Seguridad
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(14, 314);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.BtnConexion;
-            this.layoutControlItem7.Location = new System.Drawing.Point(93, 251);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(130, 40);
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem7.TextVisible = false;
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.BtnGuardar;
-            this.layoutControlItem8.Location = new System.Drawing.Point(223, 251);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(119, 40);
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem8.TextVisible = false;
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.BtnCerrar;
-            this.layoutControlItem9.Location = new System.Drawing.Point(342, 251);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(122, 40);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem9.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
@@ -306,6 +226,86 @@ namespace INVEQUIPOS_UI.Seguridad
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(525, 96);
             this.layoutControlGroup1.Text = "Servidor Principal";
+            // 
+            // BtnCerrar
+            // 
+            this.BtnCerrar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.cancel_32x328;
+            this.BtnCerrar.Location = new System.Drawing.Point(354, 263);
+            this.BtnCerrar.Name = "BtnCerrar";
+            this.BtnCerrar.Size = new System.Drawing.Size(118, 36);
+            this.BtnCerrar.StyleController = this.layoutControl1;
+            this.BtnCerrar.TabIndex = 13;
+            this.BtnCerrar.Text = "Cerrar";
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.saveall_32x32;
+            this.BtnGuardar.Location = new System.Drawing.Point(235, 263);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(115, 36);
+            this.BtnGuardar.StyleController = this.layoutControl1;
+            this.BtnGuardar.TabIndex = 12;
+            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
+            // BtnConexion
+            // 
+            this.BtnConexion.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.selectdatamember_32x32;
+            this.BtnConexion.Location = new System.Drawing.Point(105, 263);
+            this.BtnConexion.Name = "BtnConexion";
+            this.BtnConexion.Size = new System.Drawing.Size(126, 36);
+            this.BtnConexion.StyleController = this.layoutControl1;
+            this.BtnConexion.TabIndex = 11;
+            this.BtnConexion.Text = "Probar Conexion";
+            this.BtnConexion.Click += new System.EventHandler(this.BtnConexion_Click);
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.Location = new System.Drawing.Point(12, 12);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.pictureEdit1.Size = new System.Drawing.Size(138, 104);
+            this.pictureEdit1.StyleController = this.layoutControl1;
+            this.pictureEdit1.TabIndex = 5;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.pictureEdit1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(142, 108);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.BtnConexion;
+            this.layoutControlItem7.Location = new System.Drawing.Point(93, 251);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(130, 40);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.BtnGuardar;
+            this.layoutControlItem8.Location = new System.Drawing.Point(223, 251);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(119, 40);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextVisible = false;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.BtnCerrar;
+            this.layoutControlItem9.Location = new System.Drawing.Point(342, 251);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(122, 40);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem1
             // 
@@ -376,23 +376,24 @@ namespace INVEQUIPOS_UI.Seguridad
             this.Load += new System.EventHandler(this.FrmConfServidor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPwd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtUser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtBD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtServer.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();

@@ -33,8 +33,16 @@ namespace INVEQUIPOS_UI.Reuniones
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultaReunion));
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.uspConsultaReunionesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dsConsultaMeetings = new INVEQUIPOS_UI.DsConsultaMeetings();
+            this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
+            this.uspConsultaReunionesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.dBEquipoDataSet1 = new INVEQUIPOS_UI.DBEquipoDataSet1();
+            this.fieldIDReunion1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldNOMREUNION1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldResponsable1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldNOMEQUIPO2 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldTipoReunion1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldhora1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldfecharealizada2 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.TxtFechaFin = new DevExpress.XtraEditors.DateEdit();
             this.TxtFechaInicial = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -49,6 +57,10 @@ namespace INVEQUIPOS_UI.Reuniones
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.uspConsultaReunionesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dsConsultaMeetings = new INVEQUIPOS_UI.DsConsultaMeetings();
             this.dBEquipoDataSet = new INVEQUIPOS_UI.DBEquipoDataSet();
             this.uspConsultaReunionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usp_ConsultaReunionesTableAdapter = new INVEQUIPOS_UI.DBEquipoDataSetTableAdapters.Usp_ConsultaReunionesTableAdapter();
@@ -61,25 +73,14 @@ namespace INVEQUIPOS_UI.Reuniones
             this.usp_ConsultaReunionesTableAdapter3 = new INVEQUIPOS_UI.DBEquipoDataSetConsultaReuTableAdapters.Usp_ConsultaReunionesTableAdapter();
             this.fieldNOMEQUIPO1 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldfecharealizada1 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dBEquipoDataSet1 = new INVEQUIPOS_UI.DBEquipoDataSet1();
-            this.uspConsultaReunionesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.usp_ConsultaReunionesTableAdapter4 = new INVEQUIPOS_UI.DBEquipoDataSet1TableAdapters.Usp_ConsultaReunionesTableAdapter();
-            this.fieldIDReunion1 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldNOMREUNION1 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldResponsable1 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldTipoReunion1 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldhora1 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldfecharealizada2 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldNOMEQUIPO2 = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.BtnConsultar = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsConsultaMeetings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBEquipoDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaFin.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaFin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaInicial.Properties.CalendarTimeProperties)).BeginInit();
@@ -95,17 +96,16 @@ namespace INVEQUIPOS_UI.Reuniones
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsConsultaMeetings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBEquipoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConsultaReunion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBEquipoDataSetConsultaReu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBEquipoDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,15 +124,93 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // uspConsultaReunionesBindingSource2
+            // pivotGridControl1
             // 
-            this.uspConsultaReunionesBindingSource2.DataMember = "Usp_ConsultaReuniones";
-            this.uspConsultaReunionesBindingSource2.DataSource = this.dsConsultaMeetings;
+            this.pivotGridControl1.DataSource = this.uspConsultaReunionesBindingSource4;
+            this.pivotGridControl1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
+            this.fieldIDReunion1,
+            this.fieldNOMREUNION1,
+            this.fieldResponsable1,
+            this.fieldNOMEQUIPO2,
+            this.fieldTipoReunion1,
+            this.fieldhora1,
+            this.fieldfecharealizada2});
+            this.pivotGridControl1.Location = new System.Drawing.Point(12, 129);
+            this.pivotGridControl1.Name = "pivotGridControl1";
+            this.pivotGridControl1.Size = new System.Drawing.Size(936, 263);
+            this.pivotGridControl1.TabIndex = 9;
             // 
-            // dsConsultaMeetings
+            // uspConsultaReunionesBindingSource4
             // 
-            this.dsConsultaMeetings.DataSetName = "DsConsultaMeetings";
-            this.dsConsultaMeetings.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.uspConsultaReunionesBindingSource4.DataMember = "Usp_ConsultaReuniones";
+            this.uspConsultaReunionesBindingSource4.DataSource = this.dBEquipoDataSet1;
+            // 
+            // dBEquipoDataSet1
+            // 
+            this.dBEquipoDataSet1.DataSetName = "DBEquipoDataSet1";
+            this.dBEquipoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fieldIDReunion1
+            // 
+            this.fieldIDReunion1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldIDReunion1.AreaIndex = 0;
+            this.fieldIDReunion1.Caption = "No";
+            this.fieldIDReunion1.FieldName = "IDReunion";
+            this.fieldIDReunion1.Name = "fieldIDReunion1";
+            // 
+            // fieldNOMREUNION1
+            // 
+            this.fieldNOMREUNION1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldNOMREUNION1.AreaIndex = 1;
+            this.fieldNOMREUNION1.Caption = "Reunion";
+            this.fieldNOMREUNION1.FieldName = "NOM_REUNION";
+            this.fieldNOMREUNION1.Name = "fieldNOMREUNION1";
+            this.fieldNOMREUNION1.Width = 150;
+            // 
+            // fieldResponsable1
+            // 
+            this.fieldResponsable1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldResponsable1.AreaIndex = 2;
+            this.fieldResponsable1.Caption = "Responsable";
+            this.fieldResponsable1.FieldName = "Responsable";
+            this.fieldResponsable1.Name = "fieldResponsable1";
+            this.fieldResponsable1.Width = 150;
+            // 
+            // fieldNOMEQUIPO2
+            // 
+            this.fieldNOMEQUIPO2.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldNOMEQUIPO2.AreaIndex = 3;
+            this.fieldNOMEQUIPO2.Caption = "Equipo";
+            this.fieldNOMEQUIPO2.FieldName = "NOM_EQUIPO";
+            this.fieldNOMEQUIPO2.Name = "fieldNOMEQUIPO2";
+            this.fieldNOMEQUIPO2.Width = 150;
+            // 
+            // fieldTipoReunion1
+            // 
+            this.fieldTipoReunion1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldTipoReunion1.AreaIndex = 4;
+            this.fieldTipoReunion1.Caption = "Tipo Reunion";
+            this.fieldTipoReunion1.FieldName = "TipoReunion";
+            this.fieldTipoReunion1.Name = "fieldTipoReunion1";
+            this.fieldTipoReunion1.Width = 120;
+            // 
+            // fieldhora1
+            // 
+            this.fieldhora1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldhora1.AreaIndex = 5;
+            this.fieldhora1.Caption = "Hora Realizada";
+            this.fieldhora1.FieldName = "hora";
+            this.fieldhora1.Name = "fieldhora1";
+            this.fieldhora1.Width = 90;
+            // 
+            // fieldfecharealizada2
+            // 
+            this.fieldfecharealizada2.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldfecharealizada2.AreaIndex = 6;
+            this.fieldfecharealizada2.Caption = "Fecha del Evento";
+            this.fieldfecharealizada2.FieldName = "fecharealizada";
+            this.fieldfecharealizada2.Name = "fieldfecharealizada2";
+            this.fieldfecharealizada2.Width = 120;
             // 
             // TxtFechaFin
             // 
@@ -281,6 +359,33 @@ namespace INVEQUIPOS_UI.Reuniones
             this.emptySpaceItem7.Size = new System.Drawing.Size(740, 40);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.pivotGridControl1;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 117);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(940, 267);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // emptySpaceItem8
+            // 
+            this.emptySpaceItem8.AllowHotTrack = false;
+            this.emptySpaceItem8.Location = new System.Drawing.Point(876, 67);
+            this.emptySpaceItem8.Name = "emptySpaceItem8";
+            this.emptySpaceItem8.Size = new System.Drawing.Size(64, 40);
+            this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // uspConsultaReunionesBindingSource2
+            // 
+            this.uspConsultaReunionesBindingSource2.DataMember = "Usp_ConsultaReuniones";
+            this.uspConsultaReunionesBindingSource2.DataSource = this.dsConsultaMeetings;
+            // 
+            // dsConsultaMeetings
+            // 
+            this.dsConsultaMeetings.DataSetName = "DsConsultaMeetings";
+            this.dsConsultaMeetings.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dBEquipoDataSet
             // 
             this.dBEquipoDataSet.DataSetName = "DBEquipoDataSet";
@@ -341,114 +446,9 @@ namespace INVEQUIPOS_UI.Reuniones
             this.fieldfecharealizada1.FieldName = "fecharealizada";
             this.fieldfecharealizada1.Name = "fieldfecharealizada1";
             // 
-            // pivotGridControl1
-            // 
-            this.pivotGridControl1.DataSource = this.uspConsultaReunionesBindingSource4;
-            this.pivotGridControl1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
-            this.fieldIDReunion1,
-            this.fieldNOMREUNION1,
-            this.fieldResponsable1,
-            this.fieldNOMEQUIPO2,
-            this.fieldTipoReunion1,
-            this.fieldhora1,
-            this.fieldfecharealizada2});
-            this.pivotGridControl1.Location = new System.Drawing.Point(12, 129);
-            this.pivotGridControl1.Name = "pivotGridControl1";
-            this.pivotGridControl1.Size = new System.Drawing.Size(936, 263);
-            this.pivotGridControl1.TabIndex = 9;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.pivotGridControl1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 117);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(940, 267);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // dBEquipoDataSet1
-            // 
-            this.dBEquipoDataSet1.DataSetName = "DBEquipoDataSet1";
-            this.dBEquipoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uspConsultaReunionesBindingSource4
-            // 
-            this.uspConsultaReunionesBindingSource4.DataMember = "Usp_ConsultaReuniones";
-            this.uspConsultaReunionesBindingSource4.DataSource = this.dBEquipoDataSet1;
-            // 
             // usp_ConsultaReunionesTableAdapter4
             // 
             this.usp_ConsultaReunionesTableAdapter4.ClearBeforeFill = true;
-            // 
-            // fieldIDReunion1
-            // 
-            this.fieldIDReunion1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldIDReunion1.AreaIndex = 0;
-            this.fieldIDReunion1.Caption = "No";
-            this.fieldIDReunion1.FieldName = "IDReunion";
-            this.fieldIDReunion1.Name = "fieldIDReunion1";
-            // 
-            // fieldNOMREUNION1
-            // 
-            this.fieldNOMREUNION1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldNOMREUNION1.AreaIndex = 1;
-            this.fieldNOMREUNION1.Caption = "Reunion";
-            this.fieldNOMREUNION1.FieldName = "NOM_REUNION";
-            this.fieldNOMREUNION1.Name = "fieldNOMREUNION1";
-            this.fieldNOMREUNION1.Width = 150;
-            // 
-            // fieldResponsable1
-            // 
-            this.fieldResponsable1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldResponsable1.AreaIndex = 2;
-            this.fieldResponsable1.Caption = "Responsable";
-            this.fieldResponsable1.FieldName = "Responsable";
-            this.fieldResponsable1.Name = "fieldResponsable1";
-            this.fieldResponsable1.Width = 150;
-            // 
-            // fieldTipoReunion1
-            // 
-            this.fieldTipoReunion1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldTipoReunion1.AreaIndex = 4;
-            this.fieldTipoReunion1.Caption = "Tipo Reunion";
-            this.fieldTipoReunion1.FieldName = "TipoReunion";
-            this.fieldTipoReunion1.Name = "fieldTipoReunion1";
-            this.fieldTipoReunion1.Width = 120;
-            // 
-            // fieldhora1
-            // 
-            this.fieldhora1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldhora1.AreaIndex = 5;
-            this.fieldhora1.Caption = "Hora Realizada";
-            this.fieldhora1.FieldName = "hora";
-            this.fieldhora1.Name = "fieldhora1";
-            this.fieldhora1.Width = 90;
-            // 
-            // fieldfecharealizada2
-            // 
-            this.fieldfecharealizada2.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldfecharealizada2.AreaIndex = 6;
-            this.fieldfecharealizada2.Caption = "Fecha del Evento";
-            this.fieldfecharealizada2.FieldName = "fecharealizada";
-            this.fieldfecharealizada2.Name = "fieldfecharealizada2";
-            this.fieldfecharealizada2.Width = 120;
-            // 
-            // fieldNOMEQUIPO2
-            // 
-            this.fieldNOMEQUIPO2.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldNOMEQUIPO2.AreaIndex = 3;
-            this.fieldNOMEQUIPO2.Caption = "Equipo";
-            this.fieldNOMEQUIPO2.FieldName = "NOM_EQUIPO";
-            this.fieldNOMEQUIPO2.Name = "fieldNOMEQUIPO2";
-            this.fieldNOMEQUIPO2.Width = 150;
-            // 
-            // emptySpaceItem8
-            // 
-            this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(876, 67);
-            this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(64, 40);
-            this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // BtnConsultar
             // 
@@ -483,8 +483,9 @@ namespace INVEQUIPOS_UI.Reuniones
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             this.layoutControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsConsultaMeetings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBEquipoDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaFin.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaFin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFechaInicial.Properties.CalendarTimeProperties)).EndInit();
@@ -500,17 +501,16 @@ namespace INVEQUIPOS_UI.Reuniones
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsConsultaMeetings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBEquipoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConsultaReunion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBEquipoDataSetConsultaReu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBEquipoDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uspConsultaReunionesBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
