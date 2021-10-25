@@ -43,12 +43,15 @@ namespace INVEQUIPOS_UI.Menu
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonConsulta = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonConsultaReuniones = new DevExpress.XtraBars.BarButtonItem();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -70,14 +73,16 @@ namespace INVEQUIPOS_UI.Menu
             this.barButtonItem2,
             this.barButtonItem3,
             this.barButtonConsulta,
-            this.barButtonConsultaReuniones});
+            this.barButtonConsultaReuniones,
+            this.skinRibbonGalleryBarItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 14;
+            this.ribbonControl1.MaxItemId = 15;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage3,
-            this.ribbonPage5});
+            this.ribbonPage5,
+            this.ribbonPage4});
             this.ribbonControl1.Size = new System.Drawing.Size(807, 161);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
@@ -176,6 +181,12 @@ namespace INVEQUIPOS_UI.Menu
             this.barButtonConsultaReuniones.Name = "barButtonConsultaReuniones";
             this.barButtonConsultaReuniones.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonConsultaReuniones_ItemClick);
             // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 14;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -225,6 +236,21 @@ namespace INVEQUIPOS_UI.Menu
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Configurar Servidor";
             // 
+            // ribbonPage4
+            // 
+            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3});
+            this.ribbonPage4.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.colors_16x16;
+            this.ribbonPage4.Name = "ribbonPage4";
+            this.ribbonPage4.Text = "Apariencia";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.AllowTextClipping = false;
+            this.ribbonPageGroup3.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Apariencia Sistema";
+            // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.TxtServidor);
@@ -251,6 +277,7 @@ namespace INVEQUIPOS_UI.Menu
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmMenu.IconOptions.Icon")));
+            this.IconOptions.SvgImage = global::INVEQUIPOS_UI.Properties.Resources.electronics_desktopmac;
             this.IsMdiContainer = true;
             this.Name = "FrmMenu";
             this.Ribbon = this.ribbonControl1;
@@ -289,5 +316,8 @@ namespace INVEQUIPOS_UI.Menu
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonConsulta;
         private DevExpress.XtraBars.BarButtonItem barButtonConsultaReuniones;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
     }
 }

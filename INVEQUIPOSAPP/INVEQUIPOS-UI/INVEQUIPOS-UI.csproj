@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -138,17 +139,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes\RptEventos.cs">
+    <Compile Include="Reportes\GeneralRpt.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reportes\RptEventos.Designer.cs">
-      <DependentUpon>RptEventos.cs</DependentUpon>
+    <Compile Include="Reportes\GeneralRpt.Designer.cs">
+      <DependentUpon>GeneralRpt.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\RptEventosRealizados.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\RptEventosRealizados.Designer.cs">
       <DependentUpon>RptEventosRealizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RptGeneralReuniones.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\RptGeneralReuniones.Designer.cs">
+      <DependentUpon>RptGeneralReuniones.cs</DependentUpon>
     </Compile>
     <Compile Include="Reuniones\FrmAgregarReuniones.cs">
       <SubType>Form</SubType>
@@ -167,6 +174,12 @@
     </Compile>
     <Compile Include="Reuniones\FrmListadoReuniones.Designer.cs">
       <DependentUpon>FrmListadoReuniones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reuniones\FrmReunionesGeneralescs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reuniones\FrmReunionesGeneralescs.Designer.cs">
+      <DependentUpon>FrmReunionesGeneralescs.cs</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\FrmAuditoria.cs">
       <SubType>Form</SubType>
@@ -213,11 +226,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reportes\RptEventos.resx">
-      <DependentUpon>RptEventos.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\GeneralRpt.resx">
+      <DependentUpon>GeneralRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RptEventosRealizados.resx">
       <DependentUpon>RptEventosRealizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptGeneralReuniones.resx">
+      <DependentUpon>RptGeneralReuniones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reuniones\FrmAgregarReuniones.resx">
       <DependentUpon>FrmAgregarReuniones.cs</DependentUpon>
@@ -227,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reuniones\FrmListadoReuniones.resx">
       <DependentUpon>FrmListadoReuniones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reuniones\FrmReunionesGeneralescs.resx">
+      <DependentUpon>FrmReunionesGeneralescs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\FrmAuditoria.resx">
       <DependentUpon>FrmAuditoria.cs</DependentUpon>
@@ -316,7 +335,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\defaultprinter_32x32.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{19aa3617-ad03-48b7-af77-efe2f509384a}</Project>
@@ -579,6 +600,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\show_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changetheme_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colors_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electronics_desktopmac.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DevExpress\UserSkins\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

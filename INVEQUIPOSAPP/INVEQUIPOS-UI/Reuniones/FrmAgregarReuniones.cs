@@ -1,6 +1,8 @@
 ﻿using BLL;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using Entity;
+using INVEQUIPOS_UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -165,19 +167,15 @@ namespace INVEQUIPOS_UI.Reuniones
                 return;
             }
 
-            XtraMessageBox.Show("La persona responsable del Equipo ha sigo grabado satisfactoriamente",
+            XtraMessageBox.Show("El evento ha sigo grabado satisfactoriamente",
                                 ProductName,
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
             this.Close();
 
             Nuevo();
-
-
-            
+   
         }
-
-
 
         private void txtNomReunion_EditValueChanged(object sender, EventArgs e)
         {
@@ -198,6 +196,15 @@ namespace INVEQUIPOS_UI.Reuniones
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
             Nuevo();
+        }
+
+        private void BtnImprimir_Click(object sender, EventArgs e)
+        {
+            RptEventosRealizados rpt = new RptEventosRealizados();
+            int IDReunion = Convert.ToInt32(TxtIdReunion.Text);
+            rpt.DataSource = oReuniones.ReporteEventosRealizados(IDReunion);
+            rpt.ShowPreview();
+
         }
     }
 }

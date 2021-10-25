@@ -14,6 +14,8 @@ using DevExpress.XtraPrinting;
 using INVEQUIPOS_UI.Catalogos;
 using DevExpress.XtraGrid.Views;
 using DevExpress.XtraGrid.Views.Grid;
+using INVEQUIPOS_UI.Reportes;
+using DevExpress.XtraReports.UI;
 
 namespace INVEQUIPOS_UI.Reuniones
 {
@@ -66,6 +68,7 @@ namespace INVEQUIPOS_UI.Reuniones
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
+            
             Variables.gID = -1;
             FrmAgregarReuniones frm = FrmAgregarReuniones.instance();
             frm.ShowDialog();
@@ -99,6 +102,13 @@ namespace INVEQUIPOS_UI.Reuniones
             //     new PdfExportOptions { ExportType = ExportType.WYSIWYG }
             //     );
             //Process.Start("Documentos.xlsx");
+        }
+
+        private void BtnImprimir_Click(object sender, EventArgs e)
+        {
+            RptGeneralReuniones rpt = new RptGeneralReuniones();
+            rpt.DataSource = oReuniones.ReporteGeneraldeEnventos();
+            rpt.ShowPreview();
         }
     }
 }

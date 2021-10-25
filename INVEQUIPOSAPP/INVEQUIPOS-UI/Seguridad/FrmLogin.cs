@@ -19,9 +19,34 @@ namespace INVEQUIPOS_UI.Seguridad
         public FrmLogin()
         {
             InitializeComponent();
+
+            try
+            {
+
+
+                initskins();
+
+                RegistryKey key;
+                key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Invequipo");
+                string apariencia = (String)key.GetValue("Apariencia");
+                DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(apariencia);
+
+            }
+            catch
+            {
+
+            }
+
+
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source = PRESENTACIONES1\\SQLEXPRESS; Initial Catalog = DBEquipo; User ID = net2; Password=2021");
+        private void initskins()
+        {
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            DevExpress.UserSkins.BonusSkins.Register();
+        }
+
+        //SqlConnection con = new SqlConnection(@"Data Source = PRESENTACIONES1\\SQLEXPRESS; Initial Catalog = DBEquipo; User ID = net2; Password=2021");
 
 
         private void labelControl1_Click(object sender, EventArgs e)

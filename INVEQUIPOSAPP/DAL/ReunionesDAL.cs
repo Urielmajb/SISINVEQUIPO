@@ -53,6 +53,46 @@ namespace DAL
         }
 
 
+        public DataTable ReporteEventosRealizados(int IDReunion)
+        {
+            var DT = new DataTable();
+            try
+            {
+                DT = fn.Leer("Usp_Rpt_Reuniones", IDReunion);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new System.ArgumentException(ex.Message);
+
+            }
+
+            return DT;
+        }
+
+        public DataTable ReporteGeneraldeEnventos()
+        {
+            var DT = new DataTable();
+            try
+            {
+                DT = fn.Leer(   "SELECT R.IDReunion, R.NOM_REUNION, CONCAT(P.Nombre, ' ',P.Apellido)  AS Responsable, T.TipoReunion, R.hora, R.fecharealizada, E.NOM_EQUIPO FROM dbo.tblReunion R INNER JOIN tblPersonas P on P.IDPersona = R.IDPersona " +
+                                "INNER JOIN tblTipoReunion T ON T.ID_Tipo = R.ID_Tipo " +
+                                "INNER JOIN tblEquipo E ON E.ID_Equipo = R.IDReunion " + 
+                                "ORDER BY NOM_EQUIPO DESC ");
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new System.ArgumentException(ex.Message);
+
+            }
+
+            return DT;
+        }
+
+
         //Referenci a al tabla Tipo Reunion, donde la usaremos para cargar el cmbx.
         public DataTable ListarTipoReunion()
         {

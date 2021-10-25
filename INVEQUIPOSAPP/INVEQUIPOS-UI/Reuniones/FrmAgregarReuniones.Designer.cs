@@ -117,7 +117,7 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             // TxtHora
             // 
-            this.TxtHora.Location = new System.Drawing.Point(166, 131);
+            this.TxtHora.Location = new System.Drawing.Point(166, 140);
             this.TxtHora.Name = "TxtHora";
             this.TxtHora.Size = new System.Drawing.Size(140, 20);
             this.TxtHora.StyleController = this.layoutControl1;
@@ -134,7 +134,7 @@ namespace INVEQUIPOS_UI.Reuniones
             // TxtFechaRealizada
             // 
             this.TxtFechaRealizada.EditValue = null;
-            this.TxtFechaRealizada.Location = new System.Drawing.Point(464, 131);
+            this.TxtFechaRealizada.Location = new System.Drawing.Point(464, 140);
             this.TxtFechaRealizada.Name = "TxtFechaRealizada";
             this.TxtFechaRealizada.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtFechaRealizada.Properties.Appearance.Options.UseFont = true;
@@ -149,7 +149,7 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             // CmbPersona
             // 
-            this.CmbPersona.Location = new System.Drawing.Point(166, 83);
+            this.CmbPersona.Location = new System.Drawing.Point(166, 92);
             this.CmbPersona.Name = "CmbPersona";
             this.CmbPersona.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -175,14 +175,14 @@ namespace INVEQUIPOS_UI.Reuniones
             this.txtNomReunion.Name = "txtNomReunion";
             this.txtNomReunion.Properties.LinesCount = 1;
             this.txtNomReunion.Properties.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNomReunion.Size = new System.Drawing.Size(439, 20);
+            this.txtNomReunion.Size = new System.Drawing.Size(439, 29);
             this.txtNomReunion.StyleController = this.layoutControl1;
             this.txtNomReunion.TabIndex = 5;
             this.txtNomReunion.EditValueChanged += new System.EventHandler(this.txtNomReunion_EditValueChanged);
             // 
             // CmbTipoReunion
             // 
-            this.CmbTipoReunion.Location = new System.Drawing.Point(464, 107);
+            this.CmbTipoReunion.Location = new System.Drawing.Point(464, 116);
             this.CmbTipoReunion.Name = "CmbTipoReunion";
             this.CmbTipoReunion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -194,7 +194,7 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             // CmbEquipoPrestado
             // 
-            this.CmbEquipoPrestado.Location = new System.Drawing.Point(166, 107);
+            this.CmbEquipoPrestado.Location = new System.Drawing.Point(166, 116);
             this.CmbEquipoPrestado.Name = "CmbEquipoPrestado";
             this.CmbEquipoPrestado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -260,7 +260,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.CmbPersona;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 71);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 80);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(597, 24);
             this.layoutControlItem3.Text = "Responsable del Equipo";
@@ -269,9 +269,9 @@ namespace INVEQUIPOS_UI.Reuniones
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 143);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 152);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(99, 49);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(188, 40);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -281,16 +281,16 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem2.Control = this.txtNomReunion;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 47);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(597, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(597, 33);
             this.layoutControlItem2.Text = "Nombre de Reunión";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(151, 16);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(418, 143);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(418, 152);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(179, 49);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(179, 40);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem10
@@ -298,7 +298,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem10.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem10.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem10.Control = this.TxtHora;
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 119);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 128);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(298, 24);
             this.layoutControlItem10.Text = "Hora Realizada:";
@@ -309,7 +309,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem11.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem11.Control = this.CmbEquipoPrestado;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 95);
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 104);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(298, 24);
             this.layoutControlItem11.Text = "Equipo Prestado:";
@@ -320,7 +320,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem5.Control = this.TxtFechaRealizada;
-            this.layoutControlItem5.Location = new System.Drawing.Point(298, 119);
+            this.layoutControlItem5.Location = new System.Drawing.Point(298, 128);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(299, 24);
             this.layoutControlItem5.Text = "Fecha Realizada";
@@ -331,7 +331,7 @@ namespace INVEQUIPOS_UI.Reuniones
             this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem6.Control = this.CmbTipoReunion;
-            this.layoutControlItem6.Location = new System.Drawing.Point(298, 95);
+            this.layoutControlItem6.Location = new System.Drawing.Point(298, 104);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(299, 24);
             this.layoutControlItem6.Text = "Tipo Reunion";
@@ -365,9 +365,9 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             this.BtnNuevo.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.newcomment_32x324;
             this.BtnNuevo.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnNuevo.Location = new System.Drawing.Point(273, 155);
+            this.BtnNuevo.Location = new System.Drawing.Point(323, 164);
             this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(75, 36);
+            this.BtnNuevo.Size = new System.Drawing.Size(48, 36);
             this.BtnNuevo.StyleController = this.layoutControl1;
             this.BtnNuevo.TabIndex = 17;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
@@ -376,19 +376,20 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             this.BtnImprimir.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.printer_32x32;
             this.BtnImprimir.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnImprimir.Location = new System.Drawing.Point(352, 155);
+            this.BtnImprimir.Location = new System.Drawing.Point(375, 164);
             this.BtnImprimir.Name = "BtnImprimir";
-            this.BtnImprimir.Size = new System.Drawing.Size(74, 36);
+            this.BtnImprimir.Size = new System.Drawing.Size(51, 36);
             this.BtnImprimir.StyleController = this.layoutControl1;
             this.BtnImprimir.TabIndex = 16;
+            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
             // BtnCerrar
             // 
             this.BtnCerrar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.cancel_32x326;
             this.BtnCerrar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnCerrar.Location = new System.Drawing.Point(191, 155);
+            this.BtnCerrar.Location = new System.Drawing.Point(264, 164);
             this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(78, 45);
+            this.BtnCerrar.Size = new System.Drawing.Size(55, 36);
             this.BtnCerrar.StyleController = this.layoutControl1;
             this.BtnCerrar.TabIndex = 12;
             this.BtnCerrar.ToolTip = "Cerrar";
@@ -399,9 +400,9 @@ namespace INVEQUIPOS_UI.Reuniones
             // 
             this.BtnGrabar.ImageOptions.Image = global::INVEQUIPOS_UI.Properties.Resources.download_32x322;
             this.BtnGrabar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.BtnGrabar.Location = new System.Drawing.Point(111, 155);
+            this.BtnGrabar.Location = new System.Drawing.Point(200, 164);
             this.BtnGrabar.Name = "BtnGrabar";
-            this.BtnGrabar.Size = new System.Drawing.Size(76, 45);
+            this.BtnGrabar.Size = new System.Drawing.Size(60, 36);
             this.BtnGrabar.StyleController = this.layoutControl1;
             this.BtnGrabar.TabIndex = 11;
             this.BtnGrabar.ToolTip = "Guardar";
@@ -411,35 +412,29 @@ namespace INVEQUIPOS_UI.Reuniones
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.BtnGrabar;
-            this.layoutControlItem7.Location = new System.Drawing.Point(99, 143);
-            this.layoutControlItem7.MaxSize = new System.Drawing.Size(80, 49);
-            this.layoutControlItem7.MinSize = new System.Drawing.Size(80, 49);
+            this.layoutControlItem7.Location = new System.Drawing.Point(188, 152);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(80, 49);
-            this.layoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem7.Size = new System.Drawing.Size(64, 40);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.BtnCerrar;
-            this.layoutControlItem8.Location = new System.Drawing.Point(179, 143);
-            this.layoutControlItem8.MaxSize = new System.Drawing.Size(82, 49);
-            this.layoutControlItem8.MinSize = new System.Drawing.Size(82, 49);
+            this.layoutControlItem8.Location = new System.Drawing.Point(252, 152);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(82, 49);
-            this.layoutControlItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem8.Size = new System.Drawing.Size(59, 40);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.BtnImprimir;
-            this.layoutControlItem4.Location = new System.Drawing.Point(340, 143);
+            this.layoutControlItem4.Location = new System.Drawing.Point(363, 152);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(0, 40);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(42, 40);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(78, 49);
+            this.layoutControlItem4.Size = new System.Drawing.Size(55, 40);
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
@@ -447,9 +442,9 @@ namespace INVEQUIPOS_UI.Reuniones
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.BtnNuevo;
-            this.layoutControlItem12.Location = new System.Drawing.Point(261, 143);
+            this.layoutControlItem12.Location = new System.Drawing.Point(311, 152);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(79, 49);
+            this.layoutControlItem12.Size = new System.Drawing.Size(52, 40);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 

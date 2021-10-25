@@ -12,6 +12,9 @@ using INVEQUIPOS_UI.Reuniones;
 using INVEQUIPOS_UI.Seguridad;
 using Microsoft.Win32;
 using DevExpress.XtraEditors;
+using DevExpress.LookAndFeel;
+using DevExpress.XtraBars.Helpers;
+using DevExpress.XtraEditors;
 
 namespace INVEQUIPOS_UI.Menu
 {
@@ -19,7 +22,33 @@ namespace INVEQUIPOS_UI.Menu
     {
         public FrmMenu()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+                initskins();
+                initskinGallery();
+                RegistryKey key;
+                key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Invequipo");
+                string apariencia = (String)key.GetValue("Apariencia");
+                DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(apariencia);
+            }
+            catch
+            {
+
+            }
+            //InitializeComponent();
+        }
+
+
+        private void initskins()
+        {
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            DevExpress.UserSkins.BonusSkins.Register();
+        }
+
+        private void initskinGallery()
+        {
+            SkinHelper.InitSkinGallery(skinRibbonGalleryBarItem1, true);
         }
 
         private void FrmMenu_Load(object sender, EventArgs e)
@@ -50,6 +79,7 @@ namespace INVEQUIPOS_UI.Menu
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmListadoReuniones frm = FrmListadoReuniones.instance();
+            //FrmReunionesGeneralescs frm = FrmReunionesGeneralescs.instance();
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
@@ -96,6 +126,7 @@ namespace INVEQUIPOS_UI.Menu
         {
             RegistryKey mykey;
             mykey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Invequipo");
+            mykey.SetValue("Apariencia", UserLookAndFeel.Default.SkinName);
             mykey.Close();
             if (XtraMessageBox.Show("¿Esta seguro de Salir del Sistema?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {

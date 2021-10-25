@@ -72,6 +72,19 @@ namespace BLL
         }
 
 
+        public DataTable ReporteEventosRealizados(int IDReunion)
+        { 
+
+            return oReuniones.ReporteEventosRealizados(IDReunion);
+        }
+
+
+        public DataTable ReporteGeneraldeEnventos()
+        {
+
+            return oReuniones.ReporteGeneraldeEnventos();
+        }
+
         public int Grabar(ReunionEntity oReunionEntity)
         {
             return oReuniones.Grabar(oReunionEntity);

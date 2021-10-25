@@ -273,6 +273,26 @@ namespace INVEQUIPOS_UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap changetheme_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("changetheme_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap colors_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("colors_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap contentarrangeinrows_16x16 {
             get {
                 object obj = ResourceManager.GetObject("contentarrangeinrows_16x16", resourceCulture);
@@ -336,6 +356,16 @@ namespace INVEQUIPOS_UI.Properties {
         internal static System.Drawing.Bitmap database_32x32 {
             get {
                 object obj = ResourceManager.GetObject("database_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap defaultprinter_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("defaultprinter_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -457,6 +487,16 @@ namespace INVEQUIPOS_UI.Properties {
             get {
                 object obj = ResourceManager.GetObject("editrangepermission_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage electronics_desktopmac {
+            get {
+                object obj = ResourceManager.GetObject("electronics_desktopmac", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         
