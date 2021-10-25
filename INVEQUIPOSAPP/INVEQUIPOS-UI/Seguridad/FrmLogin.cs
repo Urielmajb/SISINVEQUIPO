@@ -99,19 +99,7 @@ namespace INVEQUIPOS_UI.Seguridad
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
-            //if (TxtUsuario.Text == "net" && TxtPwd.Text == "2021")
-            //{ 
-            //    FrmMenu frm = new FrmMenu();
-            //    this.Visible = false;
-            //   frm.Show();
-            //}
-
-            //else
-            //{
-            //    XtraMessageBox.Show("Contrasenia Incorrecta", Application.ProductName,
-            //                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
+     
             if (TxtPwd.Text == "2021")
             {
                 Variables.gstrUsername = TxtUsuario.Text;
@@ -135,6 +123,12 @@ namespace INVEQUIPOS_UI.Seguridad
 
             else
                 Error.SetError(TxtPwd, "");
+        }
+
+        private void BtnConfServer_Click(object sender, EventArgs e)
+        {
+            FrmConfServidor frm = new FrmConfServidor();
+            frm.ShowDialog();
         }
     }
 }

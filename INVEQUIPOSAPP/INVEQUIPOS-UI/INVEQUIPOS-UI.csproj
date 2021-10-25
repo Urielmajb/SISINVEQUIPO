@@ -613,5 +613,8 @@
   <ItemGroup>
     <Folder Include="DevExpress\UserSkins\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servermode1.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

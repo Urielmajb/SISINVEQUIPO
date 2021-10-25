@@ -9,11 +9,6 @@ namespace Entity
    public  class ReunionEntity
     {
 
-        public ReunionEntity()
-        {
-            this.Lineas = new List<DetalleReunionEquipos>();
-        }
-
         public int IDReunion { get; set; }
 
         public int IDPersona { get; set; }
@@ -27,8 +22,6 @@ namespace Entity
         public string hora { get; set; }
 
         public int ID_Equipo { get; set; }
-
-        public List<DetalleReunionEquipos> Lineas { get; set; }
 
 
     }

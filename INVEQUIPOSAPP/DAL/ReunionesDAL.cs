@@ -71,27 +71,6 @@ namespace DAL
             return DT;
         }
 
-        public DataTable ReporteGeneraldeEnventos()
-        {
-            var DT = new DataTable();
-            try
-            {
-                DT = fn.Leer(   "SELECT R.IDReunion, R.NOM_REUNION, CONCAT(P.Nombre, ' ',P.Apellido)  AS Responsable, T.TipoReunion, R.hora, R.fecharealizada, E.NOM_EQUIPO FROM dbo.tblReunion R INNER JOIN tblPersonas P on P.IDPersona = R.IDPersona " +
-                                "INNER JOIN tblTipoReunion T ON T.ID_Tipo = R.ID_Tipo " +
-                                "INNER JOIN tblEquipo E ON E.ID_Equipo = R.IDReunion " + 
-                                "ORDER BY NOM_EQUIPO DESC ");
-
-            }
-            catch (Exception ex)
-            {
-
-                throw new System.ArgumentException(ex.Message);
-
-            }
-
-            return DT;
-        }
-
 
         //Referenci a al tabla Tipo Reunion, donde la usaremos para cargar el cmbx.
         public DataTable ListarTipoReunion()
@@ -146,33 +125,6 @@ namespace DAL
             return oReunionEntity;
         }
 
-        public DataTable Construir_Grid()
-        {
-            var DT = new DataTable();
-            try
-            {   // carga todos los datos al combobox
-                DT = fn.Leer("Usp_Construir_Grid");
-            }
-            catch (Exception ex)
-            {
-                throw new System.ArgumentException(ex.Message);
-            }
-            return DT;
-        }
-
-        public DataTable Obtener_Detalle_Reunion(int IDReunion)
-        {
-            var DT = new DataTable();
-            try
-            {   // carga todos los datos al combobox
-                DT = fn.Leer("Usp_Sel_Detalle_ReunionEquipos", 0 );
-            }
-            catch (Exception ex)
-            {
-                throw new System.ArgumentException(ex.Message);
-            }
-            return DT;
-        }
 
         public int Nuevo(ReunionEntity oReunionEntity)
         {
@@ -208,102 +160,68 @@ namespace DAL
             return Exito;
         }
 
-        public int Grabar(ReunionEntity oReunionEntity)
-        {
+        //public int Grabar(ReunionEntity oReunionEntity)
+        //{
 
 
 
 
 
-            SqlConnection Cn = fn.GetConnection();
-            SqlCommand Cmd = new SqlCommand();
-            SqlTransaction tr = null;
-            int IDReunion = 0;
-            Cn.Open();
-            tr = Cn.BeginTransaction();
-            try
-            {
-                Cmd = new SqlCommand("Usp_Ins_Reunion", Cn, tr);
-                Cmd.CommandType = CommandType.StoredProcedure;
+        //    SqlConnection Cn = fn.GetConnection();
+        //    SqlCommand Cmd = new SqlCommand();
+        //    SqlTransaction tr = null;
+        //    int IDReunion = 0;
+        //    Cn.Open();
+        //    tr = Cn.BeginTransaction();
+        //    try
+        //    {
+        //        Cmd = new SqlCommand("Usp_Ins_Reunion", Cn, tr);
+        //        Cmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter parameter = new SqlParameter("@IDReunion", SqlDbType.Int, 4);
-                parameter.Direction = ParameterDirection.InputOutput;
-                parameter.Value = oReunionEntity.IDReunion;
-                Cmd.Parameters.Add(parameter);
+        //        SqlParameter parameter = new SqlParameter("@IDReunion", SqlDbType.Int, 4);
+        //        parameter.Direction = ParameterDirection.InputOutput;
+        //        parameter.Value = oReunionEntity.IDReunion;
+        //        Cmd.Parameters.Add(parameter);
 
-                Cmd.Parameters.AddWithValue("@IDPersona", oReunionEntity.IDPersona);
-                Cmd.Parameters.AddWithValue("@ID_Tipo", oReunionEntity.ID_Tipo);
-                Cmd.Parameters.AddWithValue("@NOM_REUNION", oReunionEntity.NOM_REUNION);
-                Cmd.Parameters.AddWithValue("@fecharealizada", oReunionEntity.fecharealizada);
-                Cmd.Parameters.AddWithValue("@hora", oReunionEntity.hora);
-                Cmd.ExecuteNonQuery();
+        //        Cmd.Parameters.AddWithValue("@IDPersona", oReunionEntity.IDPersona);
+        //        Cmd.Parameters.AddWithValue("@ID_Tipo", oReunionEntity.ID_Tipo);
+        //        Cmd.Parameters.AddWithValue("@NOM_REUNION", oReunionEntity.NOM_REUNION);
+        //        Cmd.Parameters.AddWithValue("@fecharealizada", oReunionEntity.fecharealizada);
+        //        Cmd.Parameters.AddWithValue("@hora", oReunionEntity.hora);
+        //        Cmd.ExecuteNonQuery();
 
-                if (IDReunion == 0)
-                {
-                    IDReunion = (int)parameter.Value;
-                }
-                oReunionEntity.IDReunion = IDReunion;
+        //        if (IDReunion == 0)
+        //        {
+        //            IDReunion = (int)parameter.Value;
+        //        }
+        //        oReunionEntity.IDReunion = IDReunion;
 
-                foreach (DetalleReunionEquipos DetalleReunion in oReunionEntity.Lineas)
-                {
-                    Cmd = new SqlCommand("Usp_Ins_Detalle_ReunionEquipos", Cn, tr);
-                    Cmd.CommandType = CommandType.StoredProcedure;
-                    Cmd.Parameters.AddWithValue("@IDReunion", oReunionEntity.IDReunion);
-                    Cmd.Parameters.AddWithValue("@ID_Equipo", DetalleReunion.ID_Equipo);
-                    //Cmd.Parameters.AddWithValue("@CANTIDAD", DetalleReunion.CANTIDAD);
-                    //Cmd.Parameters.AddWithValue("@FILA", DetalleReunion.FILA);
-                    Cmd.ExecuteNonQuery();
-                }
-                tr.Commit();
-                return IDReunion;
-            }
-            catch
-            {
-                tr.Rollback();
-                return -1;
-            }
-            finally
-            {
-                Cn.Close();
-            }
+        //        foreach (DetalleReunionEquipos DetalleReunion in oReunionEntity.Lineas)
+        //        {
+        //            Cmd = new SqlCommand("Usp_Ins_Detalle_ReunionEquipos", Cn, tr);
+        //            Cmd.CommandType = CommandType.StoredProcedure;
+        //            Cmd.Parameters.AddWithValue("@IDReunion", oReunionEntity.IDReunion);
+        //            Cmd.Parameters.AddWithValue("@ID_Equipo", DetalleReunion.ID_Equipo);
+        //            //Cmd.Parameters.AddWithValue("@CANTIDAD", DetalleReunion.CANTIDAD);
+        //            //Cmd.Parameters.AddWithValue("@FILA", DetalleReunion.FILA);
+        //            Cmd.ExecuteNonQuery();
+        //        }
+        //        tr.Commit();
+        //        return IDReunion;
+        //    }
+        //    catch
+        //    {
+        //        tr.Rollback();
+        //        return -1;
+        //    }
+        //    finally
+        //    {
+        //        Cn.Close();
+        //    }
 
-        }
+        //}
 
-        public int Ultimo_Numero()
-        {
-            SqlConnection Cn = fn.GetConnection();
-            SqlCommand Cmd = new SqlCommand();
-            int IDReunion = 0;
-            Cn.Open();
-
-            try
-            {
-                Cmd = new SqlCommand("Usp_Ultimo_Numero", Cn);
-                Cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter parameter = new SqlParameter("@ID", SqlDbType.Int, 4);
-                parameter.Direction = ParameterDirection.InputOutput;
-                parameter.Value = 0;
-                Cmd.Parameters.Add(parameter);
-                Cmd.ExecuteNonQuery();
-
-                if (IDReunion == 0)
-                {
-                    IDReunion = (int)parameter.Value;
-                }
-
-                return IDReunion;
-            }
-            catch
-            {
-                return -1;
-            }
-            finally
-            {
-                Cn.Close();
-            }
-
-        }
-
+       
 
 
     }

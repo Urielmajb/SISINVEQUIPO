@@ -99,6 +99,7 @@ namespace INVEQUIPOS_UI.Catalogos
         {
             
             TxtActivo.ReadOnly = true;
+            CargarCombobox();
 
             if (Variables.gID > 0)
             {
@@ -119,7 +120,7 @@ namespace INVEQUIPOS_UI.Catalogos
                 Nuevo();
             }
 
-            CargarCombobox();
+
 
 
         }

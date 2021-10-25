@@ -104,11 +104,11 @@ namespace INVEQUIPOS_UI.Reuniones
             //Process.Start("Documentos.xlsx");
         }
 
-        private void BtnImprimir_Click(object sender, EventArgs e)
-        {
-            RptGeneralReuniones rpt = new RptGeneralReuniones();
-            rpt.DataSource = oReuniones.ReporteGeneraldeEnventos();
-            rpt.ShowPreview();
-        }
+        //private void BtnImprimir_Click(object sender, EventArgs e)
+        //{
+        //    RptGeneralReuniones rpt = new RptGeneralReuniones();
+        //    rpt.DataSource = oReuniones.ReporteGeneraldeEnventos();
+        //    rpt.ShowPreview();
+        //}
     }
 }
